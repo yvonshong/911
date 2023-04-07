@@ -72,7 +72,7 @@
                             </div>
                         </div>
                         <div class="newcard-img-overlay">
-
+                            
                             <p class="card-text" id="talk2">
                             </p>
                         </div>
@@ -234,16 +234,18 @@
 
 
     <script language="javascript">
+        var randomBgIndex = Math.floor(Math.random() * 6) + 1;
+
         function mrc() {
             $.get('https://www.yvonshong.com/911/data.json').done(function (data) {
                 var talk_list = data.data
                 var talk1 = Math.floor(Math.random() * talk_list.length);
                 var text1 = document.getElementById("talk1");
-                text1.firstChild.nodeValue = talk_list[talk1].replace("\n", "<br>");;
+                text1.innerHTML = talk_list[talk1].replace("\n", "<br/>");;
 
                 var talk2 = Math.floor(Math.random() * talk_list.length);
                 var text2 = document.getElementById("talk2");
-                text2.firstChild.nodeValue = talk_list[talk2].replace("\n", "<br>");;
+                text2.innerHTML = talk_list[talk2].replace("\n", "<br/>");;
 
             });
 
