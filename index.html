@@ -49,7 +49,6 @@
 						<div class="back-b h-100">
 							<div class="card bor-no">
 								
-                                <!-- <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam velit quisquam veniam excepturi temporibus inventore corporis dicta sit culpa veritatis placeat earum, dolorum asperiores, delectus dolore voluptatibus, at magnam nobis! </p> -->
 								<p class="card-text" id = "talk1">
                                     
                                 </p>
@@ -73,10 +72,7 @@
 						</div>
 						<div class="back-b h-100">
 							<div class="card bor-no">
-								<h4 class="card-title"> Sarah Simon </h4>
-								<p>Web Developer</p>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam velit quisquam veniam excepturi temporibus inventore corporis dicta sit culpa veritatis placeat earum, dolorum asperiores, delectus dolore voluptatibus, at magnam nobis! </p>
-								
+                                <p class="card-text" id = "talk2"></p>								
 							</div>
 						</div>
 					</div>
@@ -117,8 +113,8 @@
 							<div class="card profile-card-6 bor-no" data-image-src="images/team-02.jpg">
 								
 								<div class="text-content">
-									<h3> Sarah Simon </h3>
-									<p>Web Design</p>
+									<h3> Picture </h3>
+									<p>download link</p>
 								</div>
 								<div class="filter"></div>
 							</div>
@@ -168,7 +164,7 @@
 								
 								<div class="text-content">
 									<h3>Yvon Shong</h3>
-									<p>Web Design</p>
+									<p>Web Designer</p>
 								</div>
 								<div class="filter"></div>
 							</div>
@@ -176,8 +172,8 @@
 						<div class="back-b h-100">
 							<div class="card bor-no">
 								<h4 class="card-title">Yvon Shong</h4>
-								<p>Web Design</p>
-                                <p class="card-text">Lorem ipsum dolor sit amet! </p>
+								<p>Web Designer</p>
+                                <p class="card-text">yvonshong</p>
 								<ul class="list-inline">
 									<li class="list-inline-item">
 										<a class="social-icon text-xs-center" target="_blank" href="#">
@@ -242,33 +238,20 @@
 
 
 <script language="javascript"> 
-    // import data from "https://raw.githubusercontent.com/yvonshong/911/master/data.json?token=GHSAT0AAAAAABYWQKZ5OKDWRRIRNXG5FAE2ZBPSPXQ";
-
     function mrc() {
-        // console.log("--------1111111111-------------------");
-        // console.log(data);
-
         $.get('data.json').done(function(data){
-            console.log("------------22222222222222---------------");
-                console.log(data);
-        });
-
-        var url = "https://raw.githubusercontent.com/yvonshong/911/master/data.json?token=GHSAT0AAAAAABYWQKZ5OKDWRRIRNXG5FAE2ZBPSPXQ"
-        var request = new XMLHttpRequest();
-        request.open("get", url);
-        request.send(null);
-        request.onload = function () {
-            // 返回状态为200，即为数据获取成功
-            var data = JSON.parse(request.responseText);
-            console.log("--------------3333333333-------------");
             console.log(data);
-        }
+            var butong_net = data.data
+            var talk1 = Math.floor(Math.random() * butong_net.length); 
+            var text1 = document.getElementById("talk1");
+            text1.firstChild.nodeValue = butong_net[talk1];
 
-        var butong_net = new Array('有朋自远方来，不亦乐乎,己所不欲，勿施于人','四海之内皆兄弟也, 学而不厌，诲人不倦','工欲善其事，必先利其器','人而无信，不知其可也, 礼之用，和为贵'); 
-        var butong_net2 = Math.floor(Math.random() * butong_net.length); 
-        var str_content = butong_net[butong_net2]
-        var text = document.getElementById("talk1");
-        text.firstChild.nodeValue = str_content;
+            var talk2 = Math.floor(Math.random() * butong_net.length); 
+            var text2 = document.getElementById("talk2");
+            text2.firstChild.nodeValue = butong_net[talk2];
+
+        });
+        
     }
     window.onload = mrc;
 </script> 
