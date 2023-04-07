@@ -44,7 +44,7 @@
 
                 <div class="newcard col-lg-6 col-md-6 col-sm-6 col-12" data-clickable="true">
                     <div class="newcard-inner">
-                        <div class="front-A h-100">
+                        <div class="front-A h-100" onclick="mrc()">
                             <div class="card profile-card-5 bor-no" data-image-src="images/team-05.jpg">
 
                                 <div class="text-content">
@@ -53,17 +53,17 @@
                             </div>
                         </div>
                         <div class="newcard-img-overlay">
-                                <p class="card-text" id = "talk1">
-                                </p>
+                            <p class="card-text" id="talk1">
+                            </p>
 
                         </div>
                     </div>
                 </div>
-                
-                
+
+
                 <div class="newcard col-lg-6 col-md-6 col-sm-6 col-12" data-clickable="true">
                     <div class="newcard-inner">
-                        <div class="front-A h-100">
+                        <div class="front-A h-100" onclick="mrc()">
                             <div class="card profile-card-5 bor-no" data-image-src="images/team-05.jpg">
 
                                 <div class="text-content">
@@ -73,8 +73,8 @@
                         </div>
                         <div class="newcard-img-overlay">
 
-                                <p class="card-text" id = "talk2">
-                                </p>
+                            <p class="card-text" id="talk2">
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -121,7 +121,7 @@
                                 <div class="card bor-no">
                                     <h4 class="card-title"> Sarah Simon </h4>
                                     <p>Web Developer</p>
-                                    <p class="card-text">Lorem ipsum dolor sit amet! </p>
+                                    <p class="card-text">asfasfaa<br>DASDAD</p>
 
                                 </div>
                             </div>
@@ -239,11 +239,11 @@
                 var talk_list = data.data
                 var talk1 = Math.floor(Math.random() * talk_list.length);
                 var text1 = document.getElementById("talk1");
-                text1.firstChild.nodeValue = talk_list[talk1];
-                
+                text1.firstChild.nodeValue = talk_list[talk1].replace("\n", "<br>");;
+
                 var talk2 = Math.floor(Math.random() * talk_list.length);
                 var text2 = document.getElementById("talk2");
-                text2.firstChild.nodeValue = talk_list[talk2];
+                text2.firstChild.nodeValue = talk_list[talk2].replace("\n", "<br>");;
 
             });
 
