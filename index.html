@@ -47,10 +47,8 @@
 							</div>
 						</div>
 						<div class="back-b h-100">
-							<div class="card bor-no">
-								
+							<div class="card bor-no">	
 								<p class="card-text" id = "talk1">
-                                    
                                 </p>
 							</div>
 						</div>
@@ -71,8 +69,9 @@
 							</div>
 						</div>
 						<div class="back-b h-100">
-							<div class="card bor-no">
-                                <p class="card-text" id = "talk2"></p>								
+							<div class="card bor-no">	
+								<p class="card-text" id = "talk2">
+                                </p>
 							</div>
 						</div>
 					</div>
@@ -240,15 +239,14 @@
 <script language="javascript"> 
     function mrc() {
         $.get('data.json').done(function(data){
-            console.log(data);
-            var butong_net = data.data
-            var talk1 = Math.floor(Math.random() * butong_net.length); 
+            var talk_list = data.data
+            var talk1 = Math.floor(Math.random() * talk_list.length); 
             var text1 = document.getElementById("talk1");
-            text1.firstChild.nodeValue = butong_net[talk1];
+            text1.firstChild.nodeValue = talk_list[talk1];
 
-            var talk2 = Math.floor(Math.random() * butong_net.length); 
+            var talk2 = Math.floor(Math.random() * talk_list.length); 
             var text2 = document.getElementById("talk2");
-            text2.firstChild.nodeValue = butong_net[talk2];
+            text2.firstChild.nodeValue = talk_list[talk2];
 
         });
         
