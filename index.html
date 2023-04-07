@@ -235,7 +235,7 @@
 
     <script language="javascript">
         function mrc() {
-            $.get('data.json').done(function (data) {
+            $.get('https://www.yvonshong.com/911/data.json').done(function (data) {
                 var talk_list = data.data
                 var talk1 = Math.floor(Math.random() * talk_list.length);
                 var text1 = document.getElementById("talk1");
