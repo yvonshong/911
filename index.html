@@ -225,8 +225,7 @@
         $(".card").css('background', function () {
             if ($(this).data("image-src")) {
                 var randomBgIndex = Math.floor(Math.random() * 7);
-                console.log(`url(images/${image_list[randomBgIndex]}) no-repeat center center`)
-                // var bg = (`url(${image_list[randomBgIndex]}) no-repeat center center`);
+                console.log('images/team-0' + randomBgIndex + '.jpg')
                 var bg = ('url(images/team-0' + randomBgIndex + '.jpg) no-repeat center center');
                 return bg;
             }
