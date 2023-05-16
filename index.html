@@ -227,11 +227,11 @@
         $(".card").css('background', function () {
             if ($(this).data("image-src")) {
                 var image_num = image_list.length();
-                var randomBgIndex = Math.floor(Math.random() * image_num);
+                var randomBgIndex = Math.floor(Math.random() * 7);
                 console.log(image_list[randomBgIndex]);
-
-                console.log(`url(${image_list[randomBgIndex]}) no-repeat center center`)
-                var bg = (`url(${image_list[randomBgIndex]}) no-repeat center center`);
+                console.log(`url(images/${image_list[randomBgIndex]}) no-repeat center center`)
+                // var bg = (`url(${image_list[randomBgIndex]}) no-repeat center center`);
+                var bg = ('url(images/team-0' + randomBgIndex + '.jpg) no-repeat center center');
                 return bg;
             }
         });
