@@ -44,7 +44,7 @@
 
                 <div class="newcard col-lg-6 col-md-6 col-sm-6 col-12" data-clickable="true">
                     <div class="newcard-inner">
-                        <div class="front-A h-100" onclick="mrc()">
+                        <div class="front-A h-100" onclick="mrc1()">
                             <div class="card profile-card-5 bor-no" data-image-src="images/team-05.jpg">
 
                                 <div class="text-content">
@@ -63,7 +63,7 @@
 
                 <div class="newcard col-lg-6 col-md-6 col-sm-6 col-12" data-clickable="true">
                     <div class="newcard-inner">
-                        <div class="front-A h-100" onclick="mrc()">
+                        <div class="front-A h-100" onclick="mrc2()">
                             <div class="card profile-card-5 bor-no" data-image-src="images/team-05.jpg">
 
                                 <div class="text-content">
@@ -234,26 +234,34 @@
 
 
     <script language="javascript">
-        var randomBgIndex = Math.floor(Math.random() * 6) + 1;
-        
-        var json_id = Math.floor(Math.random() * 8);
+        var talk_num = 6;
 
-        function mrc() {
+
+        var talk1_id = Math.floor(Math.random() * talk_num);
+
+        function mrc1() {
             // $.get('https://www.yvonshong.com/911/data.json').done(function (data) {
-            $.get(str(json_id)+".json").done(function (data) {
+            $.get(str(talk1_id)+".json").done(function (data) {
                 var talk_list = data.data
-                var talk1 = Math.floor(Math.random() * talk_list.length);
                 var text1 = document.getElementById("talk1");
-                text1.innerHTML = talk_list[talk1].replace("\n", "<br/>");;
-
-                var talk2 = Math.floor(Math.random() * talk_list.length);
-                var text2 = document.getElementById("talk2");
-                text2.innerHTML = talk_list[talk2].replace("\n", "<br/>");;
+                text1.innerHTML = talk_list[0].replace("\n", "<br/>");;
 
             });
 
         }
-        window.onload = mrc;
+        var talk2_id = Math.floor(Math.random() * talk_num);
+
+        function mrc2() {
+            // $.get('https://www.yvonshong.com/911/data.json').done(function (data) {
+            $.get(str(json_id)+".json").done(function (data) {
+                var talk_list = data.data
+                var text2 = document.getElementById("talk2");
+                text2.innerHTML = talk_list[0].replace("\n", "<br/>");;
+
+            });
+
+        }
+        // window.onload = mrc;
     </script>
 
     <script type="text/javascript">
