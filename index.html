@@ -234,34 +234,40 @@
 
 
     <script language="javascript">
-        var talk_num = 6;
+        var talk_num = 612;
 
 
-        var talk1_id = Math.floor(Math.random() * talk_num);
+        talk1_id = Math.floor(Math.random() * talk_num + 1);
+        console.log("==========================")
+        console.log(`https://www.yvonshong.com/911/${talk1_id}.json`)
+        
 
         function mrc1() {
-            // $.get('https://www.yvonshong.com/911/data.json').done(function (data) {
-            $.get(str(talk1_id)+".json").done(function (data) {
+            // $.get(`https://www.yvonshong.com/911/${talk1_id}.json`).done(function (data) {
+            $.get(`${talk1_id}.json`).done(function (data) {
                 var talk_list = data.data
                 var text1 = document.getElementById("talk1");
                 text1.innerHTML = talk_list[0].replace("\n", "<br/>");;
+                talk1_id = Math.floor(Math.random() * talk_num + 1);
 
             });
 
         }
-        var talk2_id = Math.floor(Math.random() * talk_num);
+        
+        talk2_id = Math.floor(Math.random() * talk_num);
 
         function mrc2() {
-            // $.get('https://www.yvonshong.com/911/data.json').done(function (data) {
-            $.get(str(json_id)+".json").done(function (data) {
+            // $.get(`https://www.yvonshong.com/911/${talk2_id}.json`).done(function (data) {
+            $.get(`${talk2_id}.json`).done(function (data) {
                 var talk_list = data.data
                 var text2 = document.getElementById("talk2");
                 text2.innerHTML = talk_list[0].replace("\n", "<br/>");;
+                talk2_id = Math.floor(Math.random() * talk_num);
 
             });
 
         }
-        // window.onload = mrc;
+        window.onload = mrc1;
     </script>
 
     <script type="text/javascript">
