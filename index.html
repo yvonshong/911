@@ -220,11 +220,16 @@
 
 
     <script type="text/javascript">
+        var image_list = ["https://i.328888.xyz/2023/05/16/Vi5U0t.jpeg", "https://i.328888.xyz/2023/05/16/Vi5AaX.jpeg", "https://i.328888.xyz/2023/05/16/Vi5tJc.jpeg", "https://i.328888.xyz/2023/05/16/Vi5kDA.jpeg", "https://i.328888.xyz/2023/05/16/Vi50ro.jpeg", "https://i.328888.xyz/2023/05/16/Vi5C5N.jpeg", "https://i.328888.xyz/2023/05/16/Vi5wiV.jpeg","https://i.328888.xyz/2023/05/16/Vi52Od.jpeg","https://i.328888.xyz/2023/05/16/Vi5Hzb.jpeg","https://i.328888.xyz/2023/05/16/Vi5Oaq.jpeg","https://i.328888.xyz/2023/05/16/Vi5j0z.jpeg","https://i.328888.xyz/2023/05/16/Vi5IJa.jpeg","https://i.328888.xyz/2023/05/16/Vi5rDx.jpeg","https://i.328888.xyz/2023/05/16/Vi533k.jpeg","https://i.328888.xyz/2023/05/16/Vi5R5L.jpeg","https://i.328888.xyz/2023/05/16/Vi5mip.jpeg"];
+        
+        console.log(image_list[0]);
+
         $(".card").css('background', function () {
             if ($(this).data("image-src")) {
-                var randomBgIndex = Math.floor(Math.random() * 6) + 1;
-                // console.log('images/team-0'+randomBgIndex+'.jpg')
-                var bg = ('url(images/team-0' + randomBgIndex + '.jpg) no-repeat center center');
+                var image_num = image_list.length();
+                var randomBgIndex = Math.floor(Math.random() * image_num) + 1;
+                console.log(`url(${image_list[randomBgIndex]}) no-repeat center center`)
+                var bg = (`url(${image_list[randomBgIndex]}) no-repeat center center`);
                 return bg;
             }
         });
@@ -234,10 +239,10 @@
 
 
     <script language="javascript">
-        var talk_num = 612;
+        var talk_num = 613;
 
 
-        talk1_id = Math.floor(Math.random() * talk_num + 1);
+        talk1_id = Math.floor(Math.random() * talk_num);
         console.log("==========================")
         console.log(`https://www.yvonshong.com/911/${talk1_id}.json`)
         
@@ -267,6 +272,7 @@
             });
 
         }
+
         window.onload = mrc1;
     </script>
 
