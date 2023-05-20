@@ -48,7 +48,7 @@
                 <div class="newcard col-lg-6 col-md-6 col-sm-6 col-12" data-clickable="true">
                     <div class="newcard-inner">
                         <div class="front-A h-100" onclick="mrc1()">
-                            <div class="card profile-card-5 bor-no" data-image-src="images/team-05.jpg">
+                            <div class="card profile-card-5 bor-no" data-image-src="images/5.jpg">
 
                                 <div class="text-content">
                                 </div>
@@ -67,7 +67,7 @@
                 <div class="newcard col-lg-6 col-md-6 col-sm-6 col-12" data-clickable="true">
                     <div class="newcard-inner">
                         <div class="front-A h-100" onclick="mrc2()">
-                            <div class="card profile-card-5 bor-no" data-image-src="images/team-05.jpg">
+                            <div class="card profile-card-5 bor-no" data-image-src="images/5.jpg">
 
                                 <div class="text-content">
                                 </div>
@@ -86,7 +86,7 @@
                     <div class="image-flip" onclick="this.classList.toggle('hover');">
                         <div class="flip-postfix">
                             <div class="front-A h-100">
-                                <div class="uniquecard1 profile-card-6 bor-no" data-image-src="images/team-01.jpg">
+                                <div class="uniquecard1 profile-card-6 bor-no" data-image-src="images/1.jpg">
 
                                     <div class="text-content">
                                         <h3> Three years </h3>
@@ -116,7 +116,7 @@
                     <div class="image-flip" onclick="this.classList.toggle('hover');">
                         <div class="flip-postfix">
                             <div class="front-A h-100">
-                                <div class="uniquecard2 profile-card-6 bor-no" data-image-src="images/team-02.jpg">
+                                <div class="uniquecard2 profile-card-6 bor-no" data-image-src="images/2.jpg">
 
                                     <div class="text-content">
                                         <h3> 毕业去向 </h3>
@@ -146,7 +146,7 @@
                     <div class="image-flip" onclick="this.classList.toggle('hover');">
                         <div class="flip-postfix">
                             <div class="front-A h-100">
-                                <div class="uniquecard3 profile-card-6 bor-no" data-image-src="images/team-03.jpg">
+                                <div class="uniquecard3 profile-card-6 bor-no" data-image-src="images/3.jpg">
                                     <div class="text-content">
                                         <h3> 《九世呓语》 </h3>
                                         <p>书籍电子版下载/在线阅读链接</p>
@@ -185,7 +185,7 @@
                     <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
                         <div class="flip-postfix">
                             <div class="front-A h-100">
-                                <div class="uniquecard4 profile-card-6 bor-no" data-image-src="images/team-03.jpg">
+                                <div class="uniquecard4 profile-card-6 bor-no" data-image-src="images/3.jpg">
 
                                     <div class="text-content">
                                         <h3>Yvon Shong</h3>
@@ -266,8 +266,8 @@
         $(".card").css('background', function () {
             if ($(this).data("image-src")) {
                 var randomBgIndex = Math.floor(Math.random() * 19);
-                console.log('images/team-0' + randomBgIndex + '.jpg')
-                var bg = ('url(images/team-0' + randomBgIndex + '.jpg) no-repeat center center');
+                console.log('images/' + randomBgIndex + '.jpg')
+                var bg = ('url(images/' + randomBgIndex + '.jpg) no-repeat center center');
                 return bg;
             }
 
