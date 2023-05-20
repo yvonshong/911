@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>&#x4e5d;&#x4e16;&#x5453;&#x8bed;&#x7b2c;&#x4e09;&#x5f39;</title>
+        <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+/* From extension goessner.mdmath */
+@font-face{font-family:KaTeX_AMS;font-style:normal;font-weight:400;src:url(fonts/KaTeX_AMS-Regular.woff2) format("woff2"),url(fonts/KaTeX_AMS-Regular.woff) format("woff"),url(fonts/KaTeX_AMS-Regular.ttf) format("truetype")}@font-face{font-family:KaTeX_Caligraphic;font-style:normal;font-weight:700;src:url(fonts/KaTeX_Caligraphic-Bold.woff2) format("woff2"),url(fonts/KaTeX_Caligraphic-Bold.woff) format("woff"),url(fonts/KaTeX_Caligraphic-Bold.ttf) format("truetype")}@font-face{font-family:KaTeX_Caligraphic;font-style:normal;font-weight:400;src:url(fonts/KaTeX_Caligraphic-Regular.woff2) format("woff2"),url(fonts/KaTeX_Caligraphic-Regular.woff) format("woff"),url(fonts/KaTeX_Caligraphic-Regular.ttf) format("truetype")}@font-face{font-family:KaTeX_Fraktur;font-style:normal;font-weight:700;src:url(fonts/KaTeX_Fraktur-Bold.woff2) format("woff2"),url(fonts/KaTeX_Fraktur-Bold.woff) format("woff"),url(fonts/KaTeX_Fraktur-Bold.ttf) format("truetype")}@font-face{font-family:KaTeX_Fraktur;font-style:normal;font-weight:400;src:url(fonts/KaTeX_Fraktur-Regular.woff2) format("woff2"),url(fonts/KaTeX_Fraktur-Regular.woff) format("woff"),url(fonts/KaTeX_Fraktur-Regular.ttf) format("truetype")}@font-face{font-family:KaTeX_Main;font-style:normal;font-weight:700;src:url(fonts/KaTeX_Main-Bold.woff2) format("woff2"),url(fonts/KaTeX_Main-Bold.woff) format("woff"),url(fonts/KaTeX_Main-Bold.ttf) format("truetype")}@font-face{font-family:KaTeX_Main;font-style:italic;font-weight:700;src:url(fonts/KaTeX_Main-BoldItalic.woff2) format("woff2"),url(fonts/KaTeX_Main-BoldItalic.woff) format("woff"),url(fonts/KaTeX_Main-BoldItalic.ttf) format("truetype")}@font-face{font-family:KaTeX_Main;font-style:italic;font-weight:400;src:url(fonts/KaTeX_Main-Italic.woff2) format("woff2"),url(fonts/KaTeX_Main-Italic.woff) format("woff"),url(fonts/KaTeX_Main-Italic.ttf) format("truetype")}@font-face{font-family:KaTeX_Main;font-style:normal;font-weight:400;src:url(fonts/KaTeX_Main-Regular.woff2) format("woff2"),url(fonts/KaTeX_Main-Regular.woff) format("woff"),url(fonts/KaTeX_Main-Regular.ttf) format("truetype")}@font-face{font-family:KaTeX_Math;font-style:italic;font-weight:700;src:url(fonts/KaTeX_Math-BoldItalic.woff2) format("woff2"),url(fonts/KaTeX_Math-BoldItalic.woff) format("woff"),url(fonts/KaTeX_Math-BoldItalic.ttf) format("truetype")}@font-face{font-family:KaTeX_Math;font-style:italic;font-weight:400;src:url(fonts/KaTeX_Math-Italic.woff2) format("woff2"),url(fonts/KaTeX_Math-Italic.woff) format("woff"),url(fonts/KaTeX_Math-Italic.ttf) format("truetype")}@font-face{font-family:"KaTeX_SansSerif";font-style:normal;font-weight:700;src:url(fonts/KaTeX_SansSerif-Bold.woff2) format("woff2"),url(fonts/KaTeX_SansSerif-Bold.woff) format("woff"),url(fonts/KaTeX_SansSerif-Bold.ttf) format("truetype")}@font-face{font-family:"KaTeX_SansSerif";font-style:italic;font-weight:400;src:url(fonts/KaTeX_SansSerif-Italic.woff2) format("woff2"),url(fonts/KaTeX_SansSerif-Italic.woff) format("woff"),url(fonts/KaTeX_SansSerif-Italic.ttf) format("truetype")}@font-face{font-family:"KaTeX_SansSerif";font-style:normal;font-weight:400;src:url(fonts/KaTeX_SansSerif-Regular.woff2) format("woff2"),url(fonts/KaTeX_SansSerif-Regular.woff) format("woff"),url(fonts/KaTeX_SansSerif-Regular.ttf) format("truetype")}@font-face{font-family:KaTeX_Script;font-style:normal;font-weight:400;src:url(fonts/KaTeX_Script-Regular.woff2) format("woff2"),url(fonts/KaTeX_Script-Regular.woff) format("woff"),url(fonts/KaTeX_Script-Regular.ttf) format("truetype")}@font-face{font-family:KaTeX_Size1;font-style:normal;font-weight:400;src:url(fonts/KaTeX_Size1-Regular.woff2) format("woff2"),url(fonts/KaTeX_Size1-Regular.woff) format("woff"),url(fonts/KaTeX_Size1-Regular.ttf) format("truetype")}@font-face{font-family:KaTeX_Size2;font-style:normal;font-weight:400;src:url(fonts/KaTeX_Size2-Regular.woff2) format("woff2"),url(fonts/KaTeX_Size2-Regular.woff) format("woff"),url(fonts/KaTeX_Size2-Regular.ttf) format("truetype")}@font-face{font-family:KaTeX_Size3;font-style:normal;font-weight:400;src:url(fonts/KaTeX_Size3-Regular.woff2) format("woff2"),url(fonts/KaTeX_Size3-Regular.woff) format("woff"),url(fonts/KaTeX_Size3-Regular.ttf) format("truetype")}@font-face{font-family:KaTeX_Size4;font-style:normal;font-weight:400;src:url(fonts/KaTeX_Size4-Regular.woff2) format("woff2"),url(fonts/KaTeX_Size4-Regular.woff) format("woff"),url(fonts/KaTeX_Size4-Regular.ttf) format("truetype")}@font-face{font-family:KaTeX_Typewriter;font-style:normal;font-weight:400;src:url(fonts/KaTeX_Typewriter-Regular.woff2) format("woff2"),url(fonts/KaTeX_Typewriter-Regular.woff) format("woff"),url(fonts/KaTeX_Typewriter-Regular.ttf) format("truetype")}.katex{font:normal 1.21em KaTeX_Main,Times New Roman,serif;line-height:1.2;text-indent:0;text-rendering:auto}.katex *{-ms-high-contrast-adjust:none!important;border-color:currentColor}.katex .katex-version:after{content:"0.13.11"}.katex .katex-mathml{clip:rect(1px,1px,1px,1px);border:0;height:1px;overflow:hidden;padding:0;position:absolute;width:1px}.katex .katex-html>.newline{display:block}.katex .base{position:relative;white-space:nowrap;width:-webkit-min-content;width:-moz-min-content;width:min-content}.katex .base,.katex .strut{display:inline-block}.katex .textbf{font-weight:700}.katex .textit{font-style:italic}.katex .textrm{font-family:KaTeX_Main}.katex .textsf{font-family:KaTeX_SansSerif}.katex .texttt{font-family:KaTeX_Typewriter}.katex .mathnormal{font-family:KaTeX_Math;font-style:italic}.katex .mathit{font-family:KaTeX_Main;font-style:italic}.katex .mathrm{font-style:normal}.katex .mathbf{font-family:KaTeX_Main;font-weight:700}.katex .boldsymbol{font-family:KaTeX_Math;font-style:italic;font-weight:700}.katex .amsrm,.katex .mathbb,.katex .textbb{font-family:KaTeX_AMS}.katex .mathcal{font-family:KaTeX_Caligraphic}.katex .mathfrak,.katex .textfrak{font-family:KaTeX_Fraktur}.katex .mathtt{font-family:KaTeX_Typewriter}.katex .mathscr,.katex .textscr{font-family:KaTeX_Script}.katex .mathsf,.katex .textsf{font-family:KaTeX_SansSerif}.katex .mathboldsf,.katex .textboldsf{font-family:KaTeX_SansSerif;font-weight:700}.katex .mathitsf,.katex .textitsf{font-family:KaTeX_SansSerif;font-style:italic}.katex .mainrm{font-family:KaTeX_Main;font-style:normal}.katex .vlist-t{border-collapse:collapse;display:inline-table;table-layout:fixed}.katex .vlist-r{display:table-row}.katex .vlist{display:table-cell;position:relative;vertical-align:bottom}.katex .vlist>span{display:block;height:0;position:relative}.katex .vlist>span>span{display:inline-block}.katex .vlist>span>.pstrut{overflow:hidden;width:0}.katex .vlist-t2{margin-right:-2px}.katex .vlist-s{display:table-cell;font-size:1px;min-width:2px;vertical-align:bottom;width:2px}.katex .vbox{-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-box-align:baseline;align-items:baseline;display:-webkit-inline-box;display:inline-flex;flex-direction:column}.katex .hbox{width:100%}.katex .hbox,.katex .thinbox{-webkit-box-orient:horizontal;-webkit-box-direction:normal;display:-webkit-inline-box;display:inline-flex;flex-direction:row}.katex .thinbox{max-width:0;width:0}.katex .msupsub{text-align:left}.katex .mfrac>span>span{text-align:center}.katex .mfrac .frac-line{border-bottom-style:solid;display:inline-block;width:100%}.katex .hdashline,.katex .hline,.katex .mfrac .frac-line,.katex .overline .overline-line,.katex .rule,.katex .underline .underline-line{min-height:1px}.katex .mspace{display:inline-block}.katex .clap,.katex .llap,.katex .rlap{position:relative;width:0}.katex .clap>.inner,.katex .llap>.inner,.katex .rlap>.inner{position:absolute}.katex .clap>.fix,.katex .llap>.fix,.katex .rlap>.fix{display:inline-block}.katex .llap>.inner{right:0}.katex .clap>.inner,.katex .rlap>.inner{left:0}.katex .clap>.inner>span{margin-left:-50%;margin-right:50%}.katex .rule{border:0 solid;display:inline-block;position:relative}.katex .hline,.katex .overline .overline-line,.katex .underline .underline-line{border-bottom-style:solid;display:inline-block;width:100%}.katex .hdashline{border-bottom-style:dashed;display:inline-block;width:100%}.katex .sqrt>.root{margin-left:.27777778em;margin-right:-.55555556em}.katex .fontsize-ensurer.reset-size1.size1,.katex .sizing.reset-size1.size1{font-size:1em}.katex .fontsize-ensurer.reset-size1.size2,.katex .sizing.reset-size1.size2{font-size:1.2em}.katex .fontsize-ensurer.reset-size1.size3,.katex .sizing.reset-size1.size3{font-size:1.4em}.katex .fontsize-ensurer.reset-size1.size4,.katex .sizing.reset-size1.size4{font-size:1.6em}.katex .fontsize-ensurer.reset-size1.size5,.katex .sizing.reset-size1.size5{font-size:1.8em}.katex .fontsize-ensurer.reset-size1.size6,.katex .sizing.reset-size1.size6{font-size:2em}.katex .fontsize-ensurer.reset-size1.size7,.katex .sizing.reset-size1.size7{font-size:2.4em}.katex .fontsize-ensurer.reset-size1.size8,.katex .sizing.reset-size1.size8{font-size:2.88em}.katex .fontsize-ensurer.reset-size1.size9,.katex .sizing.reset-size1.size9{font-size:3.456em}.katex .fontsize-ensurer.reset-size1.size10,.katex .sizing.reset-size1.size10{font-size:4.148em}.katex .fontsize-ensurer.reset-size1.size11,.katex .sizing.reset-size1.size11{font-size:4.976em}.katex .fontsize-ensurer.reset-size2.size1,.katex .sizing.reset-size2.size1{font-size:.83333333em}.katex .fontsize-ensurer.reset-size2.size2,.katex .sizing.reset-size2.size2{font-size:1em}.katex .fontsize-ensurer.reset-size2.size3,.katex .sizing.reset-size2.size3{font-size:1.16666667em}.katex .fontsize-ensurer.reset-size2.size4,.katex .sizing.reset-size2.size4{font-size:1.33333333em}.katex .fontsize-ensurer.reset-size2.size5,.katex .sizing.reset-size2.size5{font-size:1.5em}.katex .fontsize-ensurer.reset-size2.size6,.katex .sizing.reset-size2.size6{font-size:1.66666667em}.katex .fontsize-ensurer.reset-size2.size7,.katex .sizing.reset-size2.size7{font-size:2em}.katex .fontsize-ensurer.reset-size2.size8,.katex .sizing.reset-size2.size8{font-size:2.4em}.katex .fontsize-ensurer.reset-size2.size9,.katex .sizing.reset-size2.size9{font-size:2.88em}.katex .fontsize-ensurer.reset-size2.size10,.katex .sizing.reset-size2.size10{font-size:3.45666667em}.katex .fontsize-ensurer.reset-size2.size11,.katex .sizing.reset-size2.size11{font-size:4.14666667em}.katex .fontsize-ensurer.reset-size3.size1,.katex .sizing.reset-size3.size1{font-size:.71428571em}.katex .fontsize-ensurer.reset-size3.size2,.katex .sizing.reset-size3.size2{font-size:.85714286em}.katex .fontsize-ensurer.reset-size3.size3,.katex .sizing.reset-size3.size3{font-size:1em}.katex .fontsize-ensurer.reset-size3.size4,.katex .sizing.reset-size3.size4{font-size:1.14285714em}.katex .fontsize-ensurer.reset-size3.size5,.katex .sizing.reset-size3.size5{font-size:1.28571429em}.katex .fontsize-ensurer.reset-size3.size6,.katex .sizing.reset-size3.size6{font-size:1.42857143em}.katex .fontsize-ensurer.reset-size3.size7,.katex .sizing.reset-size3.size7{font-size:1.71428571em}.katex .fontsize-ensurer.reset-size3.size8,.katex .sizing.reset-size3.size8{font-size:2.05714286em}.katex .fontsize-ensurer.reset-size3.size9,.katex .sizing.reset-size3.size9{font-size:2.46857143em}.katex .fontsize-ensurer.reset-size3.size10,.katex .sizing.reset-size3.size10{font-size:2.96285714em}.katex .fontsize-ensurer.reset-size3.size11,.katex .sizing.reset-size3.size11{font-size:3.55428571em}.katex .fontsize-ensurer.reset-size4.size1,.katex .sizing.reset-size4.size1{font-size:.625em}.katex .fontsize-ensurer.reset-size4.size2,.katex .sizing.reset-size4.size2{font-size:.75em}.katex .fontsize-ensurer.reset-size4.size3,.katex .sizing.reset-size4.size3{font-size:.875em}.katex .fontsize-ensurer.reset-size4.size4,.katex .sizing.reset-size4.size4{font-size:1em}.katex .fontsize-ensurer.reset-size4.size5,.katex .sizing.reset-size4.size5{font-size:1.125em}.katex .fontsize-ensurer.reset-size4.size6,.katex .sizing.reset-size4.size6{font-size:1.25em}.katex .fontsize-ensurer.reset-size4.size7,.katex .sizing.reset-size4.size7{font-size:1.5em}.katex .fontsize-ensurer.reset-size4.size8,.katex .sizing.reset-size4.size8{font-size:1.8em}.katex .fontsize-ensurer.reset-size4.size9,.katex .sizing.reset-size4.size9{font-size:2.16em}.katex .fontsize-ensurer.reset-size4.size10,.katex .sizing.reset-size4.size10{font-size:2.5925em}.katex .fontsize-ensurer.reset-size4.size11,.katex .sizing.reset-size4.size11{font-size:3.11em}.katex .fontsize-ensurer.reset-size5.size1,.katex .sizing.reset-size5.size1{font-size:.55555556em}.katex .fontsize-ensurer.reset-size5.size2,.katex .sizing.reset-size5.size2{font-size:.66666667em}.katex .fontsize-ensurer.reset-size5.size3,.katex .sizing.reset-size5.size3{font-size:.77777778em}.katex .fontsize-ensurer.reset-size5.size4,.katex .sizing.reset-size5.size4{font-size:.88888889em}.katex .fontsize-ensurer.reset-size5.size5,.katex .sizing.reset-size5.size5{font-size:1em}.katex .fontsize-ensurer.reset-size5.size6,.katex .sizing.reset-size5.size6{font-size:1.11111111em}.katex .fontsize-ensurer.reset-size5.size7,.katex .sizing.reset-size5.size7{font-size:1.33333333em}.katex .fontsize-ensurer.reset-size5.size8,.katex .sizing.reset-size5.size8{font-size:1.6em}.katex .fontsize-ensurer.reset-size5.size9,.katex .sizing.reset-size5.size9{font-size:1.92em}.katex .fontsize-ensurer.reset-size5.size10,.katex .sizing.reset-size5.size10{font-size:2.30444444em}.katex .fontsize-ensurer.reset-size5.size11,.katex .sizing.reset-size5.size11{font-size:2.76444444em}.katex .fontsize-ensurer.reset-size6.size1,.katex .sizing.reset-size6.size1{font-size:.5em}.katex .fontsize-ensurer.reset-size6.size2,.katex .sizing.reset-size6.size2{font-size:.6em}.katex .fontsize-ensurer.reset-size6.size3,.katex .sizing.reset-size6.size3{font-size:.7em}.katex .fontsize-ensurer.reset-size6.size4,.katex .sizing.reset-size6.size4{font-size:.8em}.katex .fontsize-ensurer.reset-size6.size5,.katex .sizing.reset-size6.size5{font-size:.9em}.katex .fontsize-ensurer.reset-size6.size6,.katex .sizing.reset-size6.size6{font-size:1em}.katex .fontsize-ensurer.reset-size6.size7,.katex .sizing.reset-size6.size7{font-size:1.2em}.katex .fontsize-ensurer.reset-size6.size8,.katex .sizing.reset-size6.size8{font-size:1.44em}.katex .fontsize-ensurer.reset-size6.size9,.katex .sizing.reset-size6.size9{font-size:1.728em}.katex .fontsize-ensurer.reset-size6.size10,.katex .sizing.reset-size6.size10{font-size:2.074em}.katex .fontsize-ensurer.reset-size6.size11,.katex .sizing.reset-size6.size11{font-size:2.488em}.katex .fontsize-ensurer.reset-size7.size1,.katex .sizing.reset-size7.size1{font-size:.41666667em}.katex .fontsize-ensurer.reset-size7.size2,.katex .sizing.reset-size7.size2{font-size:.5em}.katex .fontsize-ensurer.reset-size7.size3,.katex .sizing.reset-size7.size3{font-size:.58333333em}.katex .fontsize-ensurer.reset-size7.size4,.katex .sizing.reset-size7.size4{font-size:.66666667em}.katex .fontsize-ensurer.reset-size7.size5,.katex .sizing.reset-size7.size5{font-size:.75em}.katex .fontsize-ensurer.reset-size7.size6,.katex .sizing.reset-size7.size6{font-size:.83333333em}.katex .fontsize-ensurer.reset-size7.size7,.katex .sizing.reset-size7.size7{font-size:1em}.katex .fontsize-ensurer.reset-size7.size8,.katex .sizing.reset-size7.size8{font-size:1.2em}.katex .fontsize-ensurer.reset-size7.size9,.katex .sizing.reset-size7.size9{font-size:1.44em}.katex .fontsize-ensurer.reset-size7.size10,.katex .sizing.reset-size7.size10{font-size:1.72833333em}.katex .fontsize-ensurer.reset-size7.size11,.katex .sizing.reset-size7.size11{font-size:2.07333333em}.katex .fontsize-ensurer.reset-size8.size1,.katex .sizing.reset-size8.size1{font-size:.34722222em}.katex .fontsize-ensurer.reset-size8.size2,.katex .sizing.reset-size8.size2{font-size:.41666667em}.katex .fontsize-ensurer.reset-size8.size3,.katex .sizing.reset-size8.size3{font-size:.48611111em}.katex .fontsize-ensurer.reset-size8.size4,.katex .sizing.reset-size8.size4{font-size:.55555556em}.katex .fontsize-ensurer.reset-size8.size5,.katex .sizing.reset-size8.size5{font-size:.625em}.katex .fontsize-ensurer.reset-size8.size6,.katex .sizing.reset-size8.size6{font-size:.69444444em}.katex .fontsize-ensurer.reset-size8.size7,.katex .sizing.reset-size8.size7{font-size:.83333333em}.katex .fontsize-ensurer.reset-size8.size8,.katex .sizing.reset-size8.size8{font-size:1em}.katex .fontsize-ensurer.reset-size8.size9,.katex .sizing.reset-size8.size9{font-size:1.2em}.katex .fontsize-ensurer.reset-size8.size10,.katex .sizing.reset-size8.size10{font-size:1.44027778em}.katex .fontsize-ensurer.reset-size8.size11,.katex .sizing.reset-size8.size11{font-size:1.72777778em}.katex .fontsize-ensurer.reset-size9.size1,.katex .sizing.reset-size9.size1{font-size:.28935185em}.katex .fontsize-ensurer.reset-size9.size2,.katex .sizing.reset-size9.size2{font-size:.34722222em}.katex .fontsize-ensurer.reset-size9.size3,.katex .sizing.reset-size9.size3{font-size:.40509259em}.katex .fontsize-ensurer.reset-size9.size4,.katex .sizing.reset-size9.size4{font-size:.46296296em}.katex .fontsize-ensurer.reset-size9.size5,.katex .sizing.reset-size9.size5{font-size:.52083333em}.katex .fontsize-ensurer.reset-size9.size6,.katex .sizing.reset-size9.size6{font-size:.5787037em}.katex .fontsize-ensurer.reset-size9.size7,.katex .sizing.reset-size9.size7{font-size:.69444444em}.katex .fontsize-ensurer.reset-size9.size8,.katex .sizing.reset-size9.size8{font-size:.83333333em}.katex .fontsize-ensurer.reset-size9.size9,.katex .sizing.reset-size9.size9{font-size:1em}.katex .fontsize-ensurer.reset-size9.size10,.katex .sizing.reset-size9.size10{font-size:1.20023148em}.katex .fontsize-ensurer.reset-size9.size11,.katex .sizing.reset-size9.size11{font-size:1.43981481em}.katex .fontsize-ensurer.reset-size10.size1,.katex .sizing.reset-size10.size1{font-size:.24108004em}.katex .fontsize-ensurer.reset-size10.size2,.katex .sizing.reset-size10.size2{font-size:.28929605em}.katex .fontsize-ensurer.reset-size10.size3,.katex .sizing.reset-size10.size3{font-size:.33751205em}.katex .fontsize-ensurer.reset-size10.size4,.katex .sizing.reset-size10.size4{font-size:.38572806em}.katex .fontsize-ensurer.reset-size10.size5,.katex .sizing.reset-size10.size5{font-size:.43394407em}.katex .fontsize-ensurer.reset-size10.size6,.katex .sizing.reset-size10.size6{font-size:.48216008em}.katex .fontsize-ensurer.reset-size10.size7,.katex .sizing.reset-size10.size7{font-size:.57859209em}.katex .fontsize-ensurer.reset-size10.size8,.katex .sizing.reset-size10.size8{font-size:.69431051em}.katex .fontsize-ensurer.reset-size10.size9,.katex .sizing.reset-size10.size9{font-size:.83317261em}.katex .fontsize-ensurer.reset-size10.size10,.katex .sizing.reset-size10.size10{font-size:1em}.katex .fontsize-ensurer.reset-size10.size11,.katex .sizing.reset-size10.size11{font-size:1.19961427em}.katex .fontsize-ensurer.reset-size11.size1,.katex .sizing.reset-size11.size1{font-size:.20096463em}.katex .fontsize-ensurer.reset-size11.size2,.katex .sizing.reset-size11.size2{font-size:.24115756em}.katex .fontsize-ensurer.reset-size11.size3,.katex .sizing.reset-size11.size3{font-size:.28135048em}.katex .fontsize-ensurer.reset-size11.size4,.katex .sizing.reset-size11.size4{font-size:.32154341em}.katex .fontsize-ensurer.reset-size11.size5,.katex .sizing.reset-size11.size5{font-size:.36173633em}.katex .fontsize-ensurer.reset-size11.size6,.katex .sizing.reset-size11.size6{font-size:.40192926em}.katex .fontsize-ensurer.reset-size11.size7,.katex .sizing.reset-size11.size7{font-size:.48231511em}.katex .fontsize-ensurer.reset-size11.size8,.katex .sizing.reset-size11.size8{font-size:.57877814em}.katex .fontsize-ensurer.reset-size11.size9,.katex .sizing.reset-size11.size9{font-size:.69453376em}.katex .fontsize-ensurer.reset-size11.size10,.katex .sizing.reset-size11.size10{font-size:.83360129em}.katex .fontsize-ensurer.reset-size11.size11,.katex .sizing.reset-size11.size11{font-size:1em}.katex .delimsizing.size1{font-family:KaTeX_Size1}.katex .delimsizing.size2{font-family:KaTeX_Size2}.katex .delimsizing.size3{font-family:KaTeX_Size3}.katex .delimsizing.size4{font-family:KaTeX_Size4}.katex .delimsizing.mult .delim-size1>span{font-family:KaTeX_Size1}.katex .delimsizing.mult .delim-size4>span{font-family:KaTeX_Size4}.katex .nulldelimiter{display:inline-block;width:.12em}.katex .delimcenter,.katex .op-symbol{position:relative}.katex .op-symbol.small-op{font-family:KaTeX_Size1}.katex .op-symbol.large-op{font-family:KaTeX_Size2}.katex .accent>.vlist-t,.katex .op-limits>.vlist-t{text-align:center}.katex .accent .accent-body{position:relative}.katex .accent .accent-body:not(.accent-full){width:0}.katex .overlay{display:block}.katex .mtable .vertical-separator{display:inline-block;min-width:1px}.katex .mtable .arraycolsep{display:inline-block}.katex .mtable .col-align-c>.vlist-t{text-align:center}.katex .mtable .col-align-l>.vlist-t{text-align:left}.katex .mtable .col-align-r>.vlist-t{text-align:right}.katex .svg-align{text-align:left}.katex svg{fill:currentColor;stroke:currentColor;fill-rule:nonzero;fill-opacity:1;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;display:block;height:inherit;position:absolute;width:100%}.katex svg path{stroke:none}.katex img{border-style:none;max-height:none;max-width:none;min-height:0;min-width:0}.katex .stretchy{display:block;overflow:hidden;position:relative;width:100%}.katex .stretchy:after,.katex .stretchy:before{content:""}.katex .hide-tail{overflow:hidden;position:relative;width:100%}.katex .halfarrow-left{left:0;overflow:hidden;position:absolute;width:50.2%}.katex .halfarrow-right{overflow:hidden;position:absolute;right:0;width:50.2%}.katex .brace-left{left:0;overflow:hidden;position:absolute;width:25.1%}.katex .brace-center{left:25%;overflow:hidden;position:absolute;width:50%}.katex .brace-right{overflow:hidden;position:absolute;right:0;width:25.1%}.katex .x-arrow-pad{padding:0 .5em}.katex .cd-arrow-pad{padding:0 .55556em 0 .27778em}.katex .mover,.katex .munder,.katex .x-arrow{text-align:center}.katex .boxpad{padding:0 .3em}.katex .fbox,.katex .fcolorbox{border:.04em solid;box-sizing:border-box}.katex .cancel-pad{padding:0 .2em}.katex .cancel-lap{margin-left:-.2em;margin-right:-.2em}.katex .sout{border-bottom-style:solid;border-bottom-width:.08em}.katex .angl{border-right:.049em solid;border-top:.049em solid;box-sizing:border-content;margin-right:.03889em}.katex .anglpad{padding:0 .03889em}.katex .eqn-num:before{content:"(" counter(katexEqnNo) ")";counter-increment:katexEqnNo}.katex .mml-eqn-num:before{content:"(" counter(mmlEqnNo) ")";counter-increment:mmlEqnNo}.katex .mtr-glue{width:50%}.katex .cd-vert-arrow{display:inline-block;position:relative}.katex .cd-label-left{display:inline-block;position:absolute;right:-webkit-calc(50% + .3em);right:calc(50% + .3em);text-align:left}.katex .cd-label-right{display:inline-block;left:-webkit-calc(50% + .3em);left:calc(50% + .3em);position:absolute;text-align:right}.katex-display{display:block;margin:1em 0;text-align:center}.katex-display>.katex{display:block;text-align:center;white-space:nowrap}.katex-display>.katex>.katex-html{display:block;position:relative}.katex-display>.katex>.katex-html>.tag{position:absolute;right:0}.katex-display.leqno>.katex>.katex-html>.tag{left:0;right:auto}.katex-display.fleqn>.katex{padding-left:2em;text-align:left}body{counter-reset:katexEqnNo mmlEqnNo}
+
+/* style for html inside of browsers */
+.katex { font-size: 1em !important; } /* align KaTeX font-size to surrounding text */
+
+eq { display: inline-block; }
+eqn { display: block}
+section.eqno {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    align-items: center;
+}
+section.eqno > eqn {
+    width: 100%;
+    margin-left: 3em;
+}
+section.eqno > span {
+    width:3em;
+    text-align:right;
+}
+
+p { 
+    text-align: justify; 
+    hyphens: auto;
+}
+
+table {
+    display: table;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    border-left: none;
+    border-right: none;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+
+figure {
+    margin: 0.5em auto;
+}
+figure > img {
+    display: block;
+    margin: 0 auto;
+    page-break-inside: avoid;
+    text-align: center;
+}
+figcaption { 
+    font-size: 0.9em;
+    margin-top: 0.5em;
+    text-align: center;
+}
+
+aside {
+  font-size: 0.9em;
+  max-width: 300px;
+  padding: 0 0 0 1em;
+  margin: 0 0 0 1em;
+  float: right;
+}
+
+aside > *:first-child {
+  margin-top: 0;
+}
+aside > *:last-child {
+  margin-bottom: 0;
+}
+
+</style>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+        
+    </head>
+    <body class="vscode-body vscode-light">
+        <h1 id="九世呓语第三弹">九世呓语第三弹</h1>
+<blockquote>
+<p>高三为数不多的语录记载，散落在这倒计时的日子里，错以为是星群。</p>
+<p>成都七中(高新校区)高 2013 级 9 班</p>
+</blockquote>
+<hr>
+<p>胡凡俊悲剧过七夕【想我们出去耍却又是多么的欢乐～】</p>
+<p>七夕凄夕，七夕凄兮！七夕其惜，凄兮其稀！七夕其系其兮，凄兮其稀其兮！其惜七夕？其惜其夕？其喜凄兮？其喜欺戏？其喜泣兮，其稀乞惜！其析其惜其兮？其喜其惜其兮？其戏其惜其兮？其喜绮兮，其稀绮兮。其嘻其兮，其栖弃栖。弃昔，泣兮！七夕凄夕！七夕凄兮！凄兮！凄兮！</p>
+<hr>
+<p>Lancer：我发现了一个惊天的大咪咪、哦不，惊天大秘密！</p>
+<p>我知道曹健铭为什么叫健铭？因为———贱名好养活！</p>
+<p>【曹健铭、何建君、兰健彰为学生三剑，沈建，黄鑑，刘建为老师三剑】</p>
+<hr>
+<p>聊到日本动漫中人物眼睛特别的大！简直就跟戴了美瞳一样！！</p>
+<p>Ismus：这美瞳太厉害了吧！！</p>
+<p>雷桑：这已经不是美瞳！！这已经是美图秀秀了！！</p>
+<hr>
+<p>由于种在盆栽里的花生死了，Apple在黑板上写：</p>
+<p>【种子征集令】</p>
+<p>众人纷纷留邮箱并道楼主好人。。。。</p>
+<p>Queen：Apple，Lancer肯定有。</p>
+<p>Apple于是在大庭广众之下询问：Lancer，你有种子么？！！</p>
+<hr>
+<p>腐女的世界观：</p>
+<p>雷桑：世界上男的与男的只有两种关系。</p>
+<p>一种是关系好的基友，另一种是关系不好的基友。</p>
+<p>汤雨晗：现在我看见两个男的在一起会自动分攻受。</p>
+<hr>
+<p>Captain（开不动）讲set aside时总是举这个例：我一个月存500元来买车！</p>
+<p>Ismus：那还真是开不动啊！</p>
+<hr>
+<p>生物课</p>
+<p>戴老：细胞的遗传物质是什么？</p>
+<p>纯洁：DNA。</p>
+<p>“细胞核的遗传物质是什么？”</p>
+<p>“DNA。”</p>
+<p>“细胞质的呢？”</p>
+<p>“RNA。。。”众笑……</p>
+<p>“好不要笑！目的达到了。”</p>
+<hr>
+<p>戴老讲老鼠的神奇之处：老鼠身上各种细菌，终生不生病，得了病其实也没有医生看（耸肩）。</p>
+<p>汤雨晗：咦？有啊有老鼠药啊！</p>
+<hr>
+<p>吴老：envy，羡慕，在某些语境下也有嫉妒的意思，大家认为哪个程度更重？</p>
+<p>安：恨。</p>
+<hr>
+<p>安全大演练，防范火灾，而康大爷和张奥在林荫上竞赛…</p>
+<p>体育委员龚振报告谢老：报告老师，本班应到51人，实到49人，康展和张奥不幸在火灾中牺牲……</p>
+<hr>
+<p>戴老说以后生物考试不比组平了，比组平上升分数！</p>
+<p>安：组平求导？</p>
+<p>Ismus：离散型也能求导？</p>
+<hr>
+<p>Yvon和歌歌在讨论小概率事件的问题。</p>
+<p>Yvon：小概率事件就像这根笔落到平面上这个点的概率———为零。话音一落，笔尖触到桌面上。</p>
+<p>歌歌：现在是100%。</p>
+<p>【后来看概率论和科学哲学知道，休谟问题指出：公理在有限时间和空间中是无法被证实。也就是明天的太阳也不一定从东方升起，没有什么东西概率就一定是零。】</p>
+<hr>
+<p>邓云天某课上犯起了困，而后无比哀怨的对龚振说：都是因为你昨天把我……（后面被和谐了我也不知道…）</p>
+<hr>
+<p>有一次班会，韩洋和舒婷被推上去主持班会～</p>
+<p>结果班会的时候！他们除了开头站在一起主持（供我们YY一下），后来韩洋居然把舒婷一个人留在上面自己跑下来坐到了！</p>
+<p>后来班团开会的时候，谢老严厉的批评韩洋！你怎么能把舒婷一个人留在上面呢！！！</p>
+<p>韩洋：额……嗯。。。我怕她太依赖我了！（各班团忍住不喷…）【后面还有一大堆自我阐述的话……各班团已经狂喷没有听下去了。。。】</p>
+<hr>
+<p>语文分推，讲到“竿”和“杆”的区别时</p>
+<p>谢老问：电线杆是什么做的？</p>
+<p>Lancer天真的回答：木头！</p>
+<p>无视……然后讲“百尺竿头”的“竿”。</p>
+<p>谢老：竹子开花，节节高嘛！所以百尺竿头，更进一步嘛！</p>
+<p>【亲……那是芝麻…】</p>
+<hr>
+<p>康大爷爆出JQ！！！</p>
+<p>此时康大爷还在数学竞赛听课阶段，在竞赛自习室里，张奥借康大爷竞赛书一用，发现竞赛书扉页上原来写名字的地方被修正液涂了，有了新的字迹的康大爷的名字</p>
+<p>张奥仔细端详：咦？这是妹子的笔迹？</p>
+<p>竞赛班的半个多月没见过妹子了，一听到就围观过来！</p>
+<p>康大爷见JQ即将暴露！马上冲过来把竞赛书抢了跑出教室去厕所！众人追赶不赢，让他得逞。</p>
+<p>他回来后大家群吼把他阿了！再一翻竞赛书，！第一页没有了！康大爷居然在厕所里面把它撕了！</p>
+<p>浓重的JQ味啊！！！大家又猜测康大爷虽然撕了肯定还好好保留着呢。。。</p>
+<hr>
+<p>九月十八日</p>
+<p>勿忘国耻，胡凡俊同学热血午间十分钟推荐。</p>
+<p>接下来的这节课是生物，戴老见状也放了个八分钟的视频。再扯了2分钟。</p>
+<p>2：30时长鸣12分钟，大家默哀3分钟。</p>
+<p>总计：戴老为这一天奉献了8+2+3分钟，他的心情一定十分沉重。</p>
+<p>【戴老心想：咦？今天上课没半个小时就下课了？】</p>
+<hr>
+<p>化学发第一轮总复习用练习册，闵老称创新设计为1号书，限时训练为2号书，三清卷为3号书。</p>
+<p>数学又发大一轮用书。</p>
+<p>Lancer在黑板上写作业：数学2号书**页的作业。</p>
+<p>Sky：（一种化学科代表的自豪感油然而生）！那也能叫2号书？化学才叫2号书！！！额，数学最多算2一撇！</p>
+<hr>
+<p>小组活动如火如荼的进行中。</p>
+<p>二组为小组想名字ing</p>
+<p>校艹因收到过一个印章是安东尼的“不过如此”，可以拿来盖，便说：不如叫不过如此小组。</p>
+<p>（我怎么想起了能力有限公司）</p>
+<p>最后大家选择了自称井组！（横竖都是二）发现井的英文是well ，不如就叫well 吧！</p>
+<p>Ismus：啥子哦！校艹（Wilson）好占便宜哦！</p>
+<p>安：反正他都是 well  son  嘛～</p>
+<hr>
+<p>9月24日，Apple：</p>
+<p>1、体育课被雨掉了！！！</p>
+<p>9月25日， Sven：</p>
+<p>1、昨天的P.E.被雨掉了，希望今天不会。（8:10 am）</p>
+<p>2、果然没有。（10:10 am ）</p>
+<p>3、但因为下午提前下课了…（11:10 am ）</p>
+<hr>
+<p>Kitty、Pauline、Lily三人穿黄色海绵宝宝姐妹装亮相。</p>
+<hr>
+<p>体育课后Yvon和Wilson走在她们后面忽然发现她们后面的图标神似奥运五环，只不过奥运五环缺了右下个环（非奥迪）</p>
+<p>Yvon：怎么只有四个环？</p>
+<p>Wilson：不知道，可能是残奥嘛。。。</p>
+<hr>
+<p>讲基因突变的低频性</p>
+<p>戴老：成都七中高新校区高三年级600人，请问有多少人发生了基因突变？</p>
+<p>Truman：600人可以随机交配么。。。</p>
+<hr>
+<p>化学课后，严大爷健步如飞冲上讲台去问闵老题，并喊“闵老！闵老！！！”</p>
+<p>Ismus听错：咦，我还以为严大爷在喊：喵！！喵！！！！</p>
+<hr>
+<p>戴老：一对夫妇，要生两个完全相同一模一样的孩子，他们最多要生多少个呢？2^23×2^23＋1！</p>
+<p>Tamara：啊！要生好久啊！</p>
+<p>（啊喂你知道你在问什么么？）</p>
+<hr>
+<p>工作人员来教室钉放教学用具（圆规、三角尺）的挂钩，众人百般阻挠他在我们需要用的位置钉挂钩！</p>
+<p>他：学校统一钉在这里，难道你们还不用嗦。</p>
+<p>众人：我们有曹大爷！</p>
+<hr>
+<p>谢老总是喜欢玩躲猫猫，上课时在前门看我们，后又走了，两秒又转回来！又走了，又转回来看我们。</p>
+<p>完全确定她走了后，韩洋：她可能明天就回来。</p>
+<p>【边城下一句】</p>
+<hr>
+<p>许安妮指到化学元素周期表给Yvon说：看！果然妮才是牛叉！【铌，元素符号：Nb】</p>
+<hr>
+<p>赖予田：我真的受伤了！（你太可爱了…）语文课好残暴，我像咩一样噤若寒羊（还含氧衍生物---韩洋呢）。</p>
+<hr>
+<p>谢老：哪些人答题是分了结构和内容来答的？（众举手）嗯，好，这些同学是上课认真听讲了的。。。（开始自己忍不住笑）祝愿你们身体健康。。。</p>
+<p>全班默然。</p>
+<hr>
+<p>某日周璐和龚振穿的衬衣神似！！！大家惊觉这肯定是情侣衣！</p>
+<p>安评：其实本来就是龚振的嘛，只是早上起来的时候周璐穿错了。</p>
+<p>【内涵】</p>
+<hr>
+<p>王月同学10月18日生日，有Lancer同学送上温馨木瓜（那什么利器…）</p>
+<p>（中午被如饥似渴的女生们瓜分掉）</p>
+<p>庆生大作战宣布失败。</p>
+<hr>
+<p>Tamara一天被抽上去听写：玉米糊……</p>
+<p>第二天又在喝山玉米汁（又是玉米！）</p>
+<p>安指tamara：果然是雌雄同体！！</p>
+<p>【怪不得李宇春的粉丝叫玉米…】</p>
+<hr>
+<p>彭成刚代课。</p>
+<p>彭：徐莉雅，你上来做下例2</p>
+<p>嗯，徐莉雅在黑板上做例2，大家应该把例2、训练2做了。</p>
+<p>【鄙视同学么= =】</p>
+<hr>
+<p>闷骚的校服找不到了，寝室众人帮他找到一件，不知道是不是他的？</p>
+<p>闷骚拿起校服一嗅：嗯？这校服有妹子的味道？</p>
+<hr>
+<p>每组上台交流理综经验，比如先做哪科，何时填机读卡</p>
+<p>徐莉雅：我平时比较偏科的嘛，生理特别不好【生理特别不好。。。】</p>
+<hr>
+<p>某周朝会完，伍新春主任还没有组织退场秩序时，高三年级紧抓时间马上就跑了。</p>
+<p>春哥：高三年级不慌动！高三年级不慌动！</p>
+<p>【同学们哪管得他呢，于是春哥失败。】</p>
+<p>第二周朝会完，春哥：嗯，高三年级我行我素，还没有说完，又跑起来了！</p>
+<p>【再次失败。】</p>
+<p>第三周朝会，春哥：嗯，高三年级先跑起来！大家向高三年级学习！</p>
+<p>【春哥已经管不住高三年级了…】</p>
+<hr>
+<p>Rich：请用“教育”造句。</p>
+<p>雷桑：我叫喻馨竹。</p>
+<hr>
+<p>下课铃声响起。</p>
+<p>闵老：下节什么课？啊？英语课？那没关系。（继续讲…）</p>
+<hr>
+<p>Yvon上台听写。</p>
+<p>歌歌评Yvon的字：字太丑！！</p>
+<p>同桌Cesare：是不是和我的一样的丑？</p>
+<p>歌歌：…………你们两个的丑得不一样…</p>
+<p>后来歌歌又对Cesare说：啊啊啊啊啊！我的字太丑了！！！都快跟你的一样了！！</p>
+<p>【有这样损人的么……】</p>
+<hr>
+<p>班上中午放高三仅有的一天运动会时的照片。</p>
+<p>Tamara在上面主持，ppt上出现权威的照片时，众人惊觉怎么不一样</p>
+<p>Tamara：权威说把我（的照片）拉长一点（这样就瘦了！），权威不好意思我把你拉得比歌歌还瘦了。。。</p>
+<p>【想起Yvon给Ismus的徽章是个“I”，Ismus自评：把这个I横放才是我吧= =（横放成矮胖型的H-黄……）】</p>
+<hr>
+<p>戴老：嗯，3比1，这是显性。</p>
+<p>雷桑立背：臣以显性，素遭悯凶。</p>
+<hr>
+<p>大源村发生奸杀五岁女童事件后走读生人心惶惶。</p>
+<p>某日欢仔一怒之下在龚振校服背后写：奸杀五岁女童。</p>
+<p>过一天，眼操扣分了，身为体育委员的龚振跑出去那那女性值周生追了回来，苦口婆心的劝改成了10分。</p>
+<p>雷桑猜：龚振一定是追出去，叫住那女同学：“同学！请看我背后！（奸杀五岁女童！）”，于是值周生吓尿了赶快回来改10分。</p>
+<hr>
+<p>徐莉雅感叹：又撕烂了一件校服。。。（建君3件，韩洋1件，赖予田1件，你是吃校服的吧）肿么办……小田田居然想要我给他缝，话说我的裤裆都是生活老师缝的。。。</p>
+<hr>
+<p>晚自习打铃Yvon管纪律：回座位了啊！！王月（点名）！！</p>
+<p>Eric：？，回座位了，阿王月？</p>
+<hr>
+<p>谢老说不听课的考试扣了一分把卷子抄一遍。</p>
+<p>Sky：那不是哪个考了152分谢老抄两遍？？？</p>
+<hr>
+<p>上语文课谢老表扬邓天成的素材写得好，结果发现是徐莉雅的，谢老又表扬邓天成抄得认真。徐莉雅表示全组都抄了的，后又发现结尾被改了，又表扬邓天成思维活跃。结果又发现是韩乐改的，又表扬邓天成总结认真。。。</p>
+<hr>
+<p>谢老讲《送邹明府游灵武》【曾宰西幾县，三年马不肥】（说邹明府勤于政务），后又评讲现代文占了整整一节自习课！谢老：其实我也有一点勤于教学对吧~</p>
+<p>雷桑：三年我们不肥。。。</p>
+<p>【有次蒋老说我们思维太发散，东想西想，吃了不长。雷桑怒道：哪个说我不长！哪个说我不长！】</p>
+<hr>
+<p>张老又因公开会让其他老师代课。</p>
+<p>闻兄：张老又例假。</p>
+<hr>
+<p>谢老光棍节因lancer说错了一句话而大批一顿。</p>
+<p>Discover评：今天光棍节，谢老一没有光，二没有棍，为什么这么激动。。。</p>
+<p>【晦涩】</p>
+<hr>
+<p>胡凡俊感慨：午间五分钟正在向午间三分钟走进，连《同桌的你》都无法听完……</p>
+<p>【唉，不解释】</p>
+<hr>
+<p>语文抽背诵，抽到纯洁，谢老问他选择背哪篇？</p>
+<p>纯洁：那就“既罢”吧……哦《廉颇蔺相如列传》</p>
+<p>谢老：哦，任骥没有背完的那篇。</p>
+<p>【这神联系…】</p>
+<hr>
+<p>大家打羽毛球时，Apple经常在场下喊晖少【师傅！】来吸他人品，通常他就会直接发球失误。</p>
+<p>晏川鸿：晖少其实该回一句：呆子！</p>
+<p>【Apple一秒钟变二师兄】</p>
+<hr>
+<p>一周轮调座位时，张婕妤干扰我们组内的座位位置。</p>
+<p>Ismus和Wilson：简直是----成事不足喻馨竹，败事有余张婕妤！</p>
+<hr>
+<p>半期考试家长会前，家长自己组织了一个聚会，老师们也去了，吴老跟楼长妈妈聊：金渝松家长啊，有时候课上我讲英语，他完全听不懂。</p>
+<p>楼长妈妈：blablablablablablablabla！</p>
+<p>方言一出，吴老愣了！这才是完全听不懂，就一个劲的点头，嗯，嗯！</p>
+<hr>
+<p>围观本班某些人的自恋：</p>
+<p>（同桌晏川帮周享受在班级日志上写…）发现自己越来越帅了，怎么办？</p>
+<p>周享受不把它擦去，继续写：还能怎么办？！</p>
+<p>Lancer评：周小眼你再帅也帅不过Lancer的！</p>
+<p>后面班级留言板上大家开了一层龚振粉丝楼</p>
+<p>Lancer又去捣乱：龚振再帅也没有Lancer帅！</p>
+<p>某人回：对！Lancer没有龚振丑！</p>
+<p>闵老回：龚振、兰健彰都没有MLG帅！</p>
+<p>【被围观评为Cute…】</p>
+<p>【我们发现闵老的英文名应该是Millikan！罗伯特·安德鲁·密立根(Robert Andrews Millikan,1868～1953)】</p>
+<hr>
+<p>热烈祝贺11月26日【喻馨竹】【韩乐】率领各dancers【Daniel、Yvon、Annie、Sally、Apple、Kevin、】夺得曦之声歌唱比赛一等奖！！！</p>
+<hr>
+<p>一篇英语阅读，讲有些花节约成本，只散发味道不产蜜，骗蜜蜂来传粉。</p>
+<p>吴老打比喻：就是只知道放P（众人觉得好娄），没有实际的东西出来！（更低俗了！）</p>
+<hr>
+<p>霈公的寄语：失眠的人头枕三峡，一夜轰轰听大江东去。———余光中</p>
+<p>Yvon问霈公：霈公你是不是说你们寝室有人打鼾哦？昨天我晚上熄灯后就听到啥子在响，还以为哪个在说话，才发现是对面你们寝室传来的呼噜声……轰轰听大江东去是不是晚上听到有人去上厕所……</p>
+<p>霈公：我完全还没有想那么多……</p>
+<hr>
+<p>体育课集合的时候，Apple戴着曹大爷的帽子。</p>
+<p>曹大爷：啊不要把我的帽子撑大了！</p>
+<p>Yvon：听到没有，说你脑壳大！</p>
+<p>Apple：哪有！！我的头还没有菊花大！（菊花大……菊花大……）</p>
+<hr>
+<p>蒋老：你们前几天晚自习都在做生物，我看了2节晚自习！今天还给物理哈！你们都喜欢帅哥不喜欢帅老头儿了！哼 (ˇ^ˇ〉</p>
+<p>【傲娇】</p>
+<hr>
+<p>物理上课继续刷卷子【蒋老：只要物理课才会拿给你们课堂上做卷子。他的老基友守和笑而不语…】</p>
+<p>Rich：“蒋爷，这几天讲不讲卷子？”“卷子还需要讲啊？！！”</p>
+<p>Rich：“蒋爷……那理想实验题卷还没有给答案？”“答案还要我给啊？！！”</p>
+<p>Rich：“蒋爷……这几天做卷子的进度……”“一天一套还用我说啊？！！”</p>
+<hr>
+<p>戴老最近抽同学回答问题总是喜欢喊同学名字的一个字（比如鸿，云，etc……）</p>
+<p>戴老抽周享夫：周享夫？…………我……就不叫你“夫”了……</p>
+<hr>
+<p>又发了一张卷子，Ismus遭不住了：本以为高三是hard（模式），结果是endless！！</p>
+<hr>
+<p>吴老：泰国最吸引我的是它的沙滩。</p>
+<p>【b**ch…上课有风险，举例要慎重 = =】</p>
+<hr>
+<p>讲极性键非极性键</p>
+<p>闵老：我就知道你们早说O3臭氧分子，O3是极性分子它形成的是极性键！（O3含π 3-4 大π键）啊喂我讲的是科普知识不要写下来！免得别人说你们闵老什么都讲！【闵老最近经常这样…】</p>
+<hr>
+<p>蒋爷未经电教允许在教室电脑上玩蜘蛛纸牌！强烈谴责！</p>
+<hr>
+<p>物理讲测电阻。</p>
+<p>蒋老：测电阻除了伏安法，伏安特性曲线，还有伏阻法，甚至还有伏伏法，阻阻法，安安法</p>
+<p>【安安躺中……蒋老怎么感觉像在卖萌。。。】</p>
+<hr>
+<p>生物小测试，大家随机改别个的卷子。</p>
+<p>就只听到晏川鸿对邓云天说：邓云天你好猛哦！</p>
+<hr>
+<p>吴老：这四个选项 in the charge of .in exchange of .in terms of .in addition to .咦，桂源眼睛在转，是不是在想in the dishes？</p>
+<hr>
+<p>语文考试名著导读</p>
+<p>“谋略敢欺诸葛亮，陈平岂敌才能”上述文段选自《水浒传》，概括与此人物有关的一个情节。</p>
+<p>许安妮没读过水浒，实在不知道，乱写一个：吴用大战诸葛亮！</p>
+<p>后来她还解释！我写的不是大战！是吴用智斗诸葛亮！被群嘲……</p>
+<p>【怎么有股《爱情公寓》里桃花侠大战菊花怪的感觉。。。。】</p>
+<hr>
+<p>Ismus：我觉得雨霖铃倒过来念好没有文化气质。。。</p>
+<hr>
+<p>谢老：把汤雨晗这一句话的解读换到张思霈的理解里，把他们两个一结合，哦不！把他们两个的解读一结合……</p>
+<hr>
+<p>后来下课讨论汤雨晗、张思霈他们两人的娃娃该叫什么……</p>
+<p>余浩麟：叫张涵涵嘛</p>
+<p>汤雨晗路过说：（羞涩）哎呀，涵涵不好听~~~</p>
+<p>【这是默认了么】</p>
+<hr>
+<p>余浩麟：古译文，你以后的娃娃叫古文。</p>
+<p>校艹：哼，你娃娃叫愚猫叫！</p>
+<p>【二组懂的……组内记的一个遗传病类型的口诀，染色体异常疾病有：唇脑高压尿，特纳愚猫叫。（多基因遗传病：唇裂、无脑儿、原发性高血压、青少年型糖尿病；染色体异常遗传病：特纳氏综合征、先天愚型、猫叫综合征）】</p>
+<p></p>
+<p>上完体育课上英语课</p>
+<p>上课前吴老大发感慨：我很羡慕你们，我上一次想你们一样出那么多汗，是……</p>
+<p>Lancer：是昨天晚上。</p>
+<p>【晦涩】</p>
+<hr>
+<p>一张英语分推卷，多半是吴老出的题！有一道题是</p>
+<p>Which of the following is Jamaican English?</p>
+<p>A.Captain Car</p>
+<p>B.the English teacher Captain</p>
+<p>C.Captain is a talented footballer</p>
+<p>D.Captain talented teacher</p>
+<p>Ismus：A选项就是开不动车！！</p>
+<hr>
+<p>Daniel对Rich说：小心我弄你哈！</p>
+<p>Rich不明觉里：？小心你是农民哈？</p>
+<hr>
+<p>Rich：我以前觉得Justin Bieber的歌好黄哦！</p>
+<p>众：？</p>
+<p>Rich：那时我听到里面有J B………我太懵懂无知了……</p>
+<p>【这也叫无知？】</p>
+<hr>
+<p>Ismus考我们：一头猪重500斤，桥承重最多400斤，请问它怎么过桥？</p>
+<p>Wilson：不知道，你是不是想说猪也不知道？</p>
+<p>Ismus： = = 不是……只要那头猪跑到7.9 km/s 就可以了………………【理科生桑不起】</p>
+<hr>
+<p>这是根据别人说的脑补的：</p>
+<p>众问梳子：你知道《命中注定我爱你》不？</p>
+<p>李舒：不知道。。。</p>
+<p>众：那《爱上琉璃苣女孩》呢</p>
+<p>李舒：哦！！知道知道！</p>
+<p>众：《微笑Pasta》呢？</p>
+<p>李舒：不知道……</p>
+<p>众：那《微笑百事达》呢？</p>
+<p>李舒：哦知道知道！</p>
+<p>【这就是女神总是被屌丝牵走的原因…】</p>
+<hr>
+<p>蒋老：这就是洛伦兹力，洛伦兹是哪个国家的？</p>
+<p>徐莉雅：法国的！</p>
+<p>蒋老：法国的？</p>
+<p>徐莉雅：……不知道…</p>
+<p>曹大爷：韩国的思密达！</p>
+<p>【一切都是韩国的思密达！】</p>
+<p>【正色：洛伦兹是荷兰物理学家】</p>
+<hr>
+<p>某日该严进林值日，郑云瀚晚自习上去帮严写值日生寄语，居然直接写上严大爷经典名篇《紫色的路》中的那句话：是茫然失措的无奈，还是蓦然回首的等待。</p>
+<p>严大爷冲上去把郑云瀚打了一顿……</p>
+<hr>
+<p>闵老：都21世纪了，谁还用托盘天平？谁还用pH试纸？都用电子天平和pH计了！你想连朝鲜都发射卫星了！</p>
+<p>【又黑朝鲜…】</p>
+<hr>
+<p>某日下午Yvon从超市回来，途遇蒋老，蒋老：你又买了些啥子？</p>
+<p>于是翻到Yvon的早餐蛋黄派。</p>
+<p>蒋老：少吃点啥子啥子派，派里面有反式脂肪酸。</p>
+<p>Yvon一愣，再：哦！顺反结构！</p>
+<p>然后蒋老就愣到了……</p>
+<hr>
+<p>楼长在寝室说：其实所有游戏设计出来都是有Buy的。</p>
+<p>众没有听懂，哦！原来是BUG …楼长把它读成了buy …</p>
+<hr>
+<p>祝贺楼长保送中科大系列篇：</p>
+<p>12月17日，有人给吴老讲楼长保送成功了！</p>
+<p>吴老：那太好了！（大家以为是在祝贺楼长），（对旁边的楼长说）这样就不用折磨你，也不用折磨我了……</p>
+<p>众黑线：这样他就可以不管其它科，天天缠到你了。</p>
+<p>后来！中科大发消息说：请英语不好的同学提前补习，本校使用的大多都是国外教材。</p>
+<p>楼长和吴老哭了。</p>
+<hr>
+<p>后来楼长要提前去读预科，先离我们而去。</p>
+<p>于是众人都预谋临行前阿他送别，一个寝室阿一次，还提前通知了生活老师给他说楼长要走了，我们要以我们的形式给他送行，于是得到了生活老师的允许……把他大阿特阿……</p>
+<p>在楼长临行前最后一天，张奥接替他的职位，并组织大家每人给楼长写几句话，并留下联系方式。【其中留言分男女生版面的！歌歌写在男生版面…女生版面开头：楼长！妹子单独给你写的信就不要想了！我厚着脸皮帮你喊每个写点。然后第一个写的人，就是舒潇。。并署名：潇姐。】</p>
+<p>并且楼长临行前给每个人，每个老师写了点什么，还每个老师送了一个杯子。</p>
+<hr>
+<p>结果！！他走不脱！！！！！学校不放他走。</p>
+<p>大家又觉得楼长赚足了众人温情的回忆骗得了妹子的联系方式，就留下来了！得把他再阿一道！</p>
+<p>【时值年关，想到长大以后我们这一辈的人过年的时候就和别人联机打Dota，坐在一起打三国杀，在别人孩子面前阿他们家长想想就觉得热血= =！】</p>
+<p>吴老问大家：楼长明年5月回来？</p>
+<p>众人：他下周就回来。。。</p>
+<p>【嗯，高考，还是要一起面对。】</p>
+<hr>
+<p>张奥英语作文写一个点是应聘时说自己会英语：I can speak English as well as Chinese.（会说双语）</p>
+<p>吴老评：张奥，你这是说你的英语说得向英语一样好，还是英语说得向汉语一样撇？</p>
+<p>【啊喂……张奥后来可是常常130+】</p>
+<hr>
+<p>守和：同桌有没有把（停课期间的）卷子给上竞赛的？</p>
+<p>康大爷同桌徐莉雅：给了的，我把所有的都给了他。</p>
+<p>【！！！莫非你就是那个康大爷誓死保卫的名字笔者！！！】</p>
+<hr>
+<p>Daniel早上上台去给大家听写诗词：第一个，寡人之于国也。（下一句）鱼鳖不可胜食也。</p>
+<p>【微冷】</p>
+<hr>
+<p>英语阅读讲熊孩子在学校里称霸！</p>
+<p>吴老：小孩又能在哪里称霸呢？</p>
+<p>Ismus：学 -  霸！</p>
+<hr>
+<p>守和上课没事用投影仪把自己放大了220倍</p>
+<hr>
+<p>258寝室乒乓球大赛，用两张床桌+字典拼成乒乓桌</p>
+<p>由于字典当中线不易摆放，一边范围大一边小。</p>
+<p>杨放Vs张奥，四个下，眼看放哥已经3：0，即将4:0放哥惨败！！</p>
+<p>放哥却此时摆放起字典：不行，我要把中界移到中间来，这样对你不公平------我要让你输得心服口服！</p>
+<p>于是众人被他的负隅顽抗宁死不屈的气节震慑= =</p>
+<hr>
+<p>吴老讲定语从句：I give the job to Captain（后面再接从句），Captain是什么东西？</p>
+<p>众：Captain不是东西！</p>
+<hr>
+<p>Lancer：天线宝宝每到8：30便拍着自己的肚子叫———看电视，看电视。。。</p>
+<hr>
+<p>语文抽龚振起来背成语，大智若愚什么意思？</p>
+<p>龚振解释完后，谢老问：你觉得我们班哪个最大智若愚？</p>
+<p>龚振：康展吧！！</p>
+<p>【康大爷暗咒：你才愚……你全家都愚……】</p>
+<hr>
+<p>建君问晖少：你听过苍老师的《Let me go》没有？</p>
+<p>晖少：嗯？不是《Let you in》么？</p>
+<hr>
+<p>谢老：这已经是第二十周的开头，不知不觉我们高三已经经过了十九周，而我们的理综，也进行了不下十位数的考试了。</p>
+<p>【好吓人…】</p>
+<hr>
+<p>一月七日，班会课＋一诊送刑</p>
+<p>前面多正常的，念及新年伊始还没有送上新年的祝福，现在送上一诊祝福＋献礼物，此时礼物小天使→→吴老！已经在门外恭候多时【校艹叹：天使家族又多了一名成员…】</p>
+<p>吴老进来也文绉绉的说几句祝福：只要你们认真听讲！！！我和谢老就会前仆后继【众开始做成语题：前面的倒下，后面的人继续跟上去，形容英勇奋斗，不怕牺牲？】！</p>
+<p>谢老：啊喂！你的意思是我首当其冲吧！！！【众：第一个遭受迫害？】</p>
+<p>吴老：嗯……我们两个会和大家一起努力……我和谢老狼狈为奸……【众：！！够了！！快发糖吧！！】</p>
+<hr>
+<p>吴老一节课能说很多个成语【残羹冷炙、命途多舛、马失前蹄、栩栩如生】，能写出譬如【斡旋者】之类的汉字，只不过偶尔也会冒出【成千上百】之类的无厘头…</p>
+<p>众人评：当英语老师爱上了语文，语文老师爱上了数学。。。我们班怎么过啊。。。</p>
+<hr>
+<p>校艹在为组上各人画**精当作身份识别…【以他最擅长画神奇宝贝的技术…】，如黄瑞琪、黄志涵被封雄雌黄瓜精！雷玉熙被画西瓜精！校艹对Yvon、许安妮说：只有你们两个没有画了，你是什么瓜？</p>
+<p>安：我是妮瓜。</p>
+<p>校艹：妮瓜是什么瓜？</p>
+<p>安：就是你瓜……</p>
+<hr>
+<p>康大爷被坑记</p>
+<p>康大爷停课搞竞赛，外加假期一直在攻数学平几的难题，可惜数学竞赛考试时平几出得略简单很多人都做起了，康大爷与一等奖错过。。。</p>
+<p>推选北大自主招生校荐时，零诊和一诊考试成绩作参考，各取一半，康大爷败给梳子。</p>
+<p>后来其他学校的校荐名额开始选时，学校认为物理和数学竞赛获奖者有优势，评选时该加分。。。并且零诊成绩和一诊成绩三七分，零诊不理想的康大爷就错过了。。。</p>
+<p>后来评选省三好，康大爷以一票之差的优势胜利。</p>
+<p>惜后来学校发现他体育成绩不达标而落选。</p>
+<p>引得守和在课堂上对康大爷发出遗憾的感慨：我们觉得平几如果出难一点，说不定康展就是一等奖了。同时守和并爆当年他的时运不齐，命途多舛。对康大爷说：康展！我理解你！我们是一样的！！一点挫折怕什么！说不定这更能激励你背水一战！</p>
+<p>【当然也同时祝福梳子的北大自招成功！！！】</p>
+<hr>
+<p>2月2日，吴老公历生日【这么二】</p>
+<p>于是众人毫不客气的在教室门口边阿吴老边唱歌……阿完了一整首生日快乐歌…</p>
+<hr>
+<p>戴老总是很无聊……拿班上同学的名字用美工笔练字……</p>
+<p>拿黄志涵写【志向远大，内涵深厚…】</p>
+<p>有一天他上去给周享夫说他的字不能太飘了…</p>
+<p>并又练字【先为大丈夫，后可大享受。】</p>
+<p>众人不小心拾得他写下的纸狂喷……并认为应该是【先为大夫，后可大受！】这才符合周享受的特点！</p>
+<hr>
+<p>吴老上课讲 care 的知识点：在外国表白也不会用I love you，而是用I care about you，唉这你们到了大学再用。</p>
+<p>结果他又给我们补充说了一个…：I want to be more than that.</p>
+<hr>
+<p>吴老上课单词拼错被龚振指出，吴老愤愤地说：所以单词要经常记！不然就落得这种下场，居然被龚振指出来！！！</p>
+<hr>
+<p>蒋爷拖堂，却说：都怪金渝松没有提醒！！</p>
+<p>后来他居然又在下课之前剩五分钟给我们自习，众人认为这是因为楼长没有在课堂上向他问题了！！</p>
+<hr>
+<p>谢老讲题目的暗示性。说：暗示性就是什么呢？比如说我对龚振。</p>
+<p>于是她看了一下龚振，指了一下后面，大家不明觉厉。</p>
+<p>谢老淡定的说：我这是在暗示他个人站到后面去听课。</p>
+<p>【龚振无比蛋疼…】</p>
+<hr>
+<p>Lancer给徐莉雅和任大买了新年米老头大礼包，李俊佼十分不满，而Lancer为了买大礼包花光了卡上的钱，只有借郑云瀚的卡，佼佼讽刺说：为了讨好外面的女人散尽家财，最后还是只有靠自己的男人。。。</p>
+<hr>
+<p>吴老与班上的班级足球赛，第一届时2：1，吴老方胜利。</p>
+<p>于是吴老在班上大肆吹嘘：我站在那里不动，球来了我就带球射门，然后就进了。</p>
+<p>众人不悦，建君：吴老！后来呢？后来你是不是四脚朝天了？哈哈！</p>
+<p>【你们又把吴老啊了…】</p>
+<p>第二届比赛前，同学们一直训练技术，结果吴老以他飘渺的脚步、凶悍的防守，收获了0进球6犯规的骄人成绩，这值得每一位巨星学习（你们能做到零的坚守吗？）</p>
+<p>Queen：吴老叫嚣当年多么勇猛，结了婚过后，一蹶不振，两腿发软，三餐减量，四肢无力，五脏六腑，七上八下，九班阿他，十分难受。</p>
+<p>（吴老被阿傻了今早走错了班）上课前说：老师的职责是教育！以鼓励为主！不能每次都让你们赢！</p>
+<p>【龚振：那你总要赢一回呀！】</p>
+<hr>
+<p>佼佼一拍桌子怒目道：我很温柔！</p>
+<hr>
+<p>安说道：初中有一妹子一定是龚振的妹妹！她叫龚平！</p>
+<p>【龚开！！你妈叫你们三个回家吃饭！】</p>
+<hr>
+<p>2月5日，在前几天联结成的【阿汪琮杰联盟】正式行动！庆祝汪琮杰十八岁生日快乐！吴老也签字加入联盟了的！</p>
+<p>下了英语课（今天英语课连堂你怎么也跑不了的…）汪琮杰遭遇了少林十八铜人连环无敌金刚太空弹新式阿姆斯特朗回旋空气加速阿姆斯特朗炮办法吧我的小宇宙我不是死鸟一辉又四分之一套么上海＃＃之阿鲁巴！真的有十八下。。【我也看不懂周璐在写什么…】，其间某吴姓成年人异常活跃，他一定不是为了报仇………</p>
+<p>该成年人在让听课的女老师出去后亲切的提醒：【把门关上！】</p>
+<hr>
+<p>《九世呓语第三弹》   终</p>
+<p>语录即将进入最后一弹，最后的三个月。当然最后一弹也是在高考之后再发。</p>
+<p>现在商讨一些其他事情，就是毕业之时的一些活动！成立【毕业委员会】，其下隶属有【毕业旅行组】、【语录编辑组】（详情见http://tieba.baidu.com/p/2215598315）</p>
+<p>比如Rich制作的相册～比如高考后要抽几天来专门写同学录～</p>
+<p>现在什么都不想管了= = 考完再说</p>
+<hr>
+<blockquote>
+<p>because We are only young once           ——— Kitty  2013.6.5</p>
+</blockquote>
+
+        
+        
+    </body>
+    </html>
