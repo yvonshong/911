@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>九世呓语</title>
+    <title>九世呓语 | 我们把往事的记忆幻化成光影纸质想使之永垂不朽</title>
     <!-- <script src="http://static.runoob.com/assets/vue/1.0.11/vue.min.js"></script> -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -104,7 +104,7 @@
                                             可戳 Bilibili 观看此系列视频
                                         </a>
                                     </p>
-                                    <p class="card-text">只为诸君 不忘当年 不忘此间欢笑</p>
+                                    <p class="card-text">十七八岁，雪白的衣领上系着我们鲜红的梦想。</p>
 
                                 </div>
                             </div>
@@ -119,17 +119,22 @@
                                 <div class="uniquecard2 profile-card-6 bor-no" data-image-src="images/team-02.jpg">
 
                                     <div class="text-content">
-                                        <h3> After School </h3>
-                                        <p> Student placement</p>
+                                        <h3> 毕业去向 </h3>
+                                        <p> 2013-2017-2020-2022 统计</p>
                                     </div>
                                     <div class="filter"></div>
                                 </div>
                             </div>
                             <div class="back-b h-100">
                                 <div class="card bor-no">
-                                    <h4 class="card-title"> 同学近况 </h4>
+                                    <h4 class="card-title"> 毕业去向 </h4>
                                     <!-- <p>2022 年统计结果</p> -->
-                                    <p class="card-text">毕业后的去向，持续统计，详情可联系 Yvon 获得</p>
+                                    <p class="card-text">
+                                        <a class="social-icon text-xs-center" target="_blank"
+                                            href="https://kp6d5cxbsq.feishu.cn/sheets/shtcnxb4imVMwaIDxTupOC19Did">
+                                            毕业后的去向，2013-2017-2020-2022 持续统计
+                                        </a>
+                                        ，详情可联系 Yvon 获得</p>
 
                                 </div>
                             </div>
@@ -144,8 +149,8 @@
                                 <div class="uniquecard3 profile-card-6 bor-no" data-image-src="images/team-03.jpg">
 
                                     <div class="text-content">
-                                        <h3> PDF </h3>
-                                        <p>download link</p>
+                                        <h3> 《九世呓语》 </h3>
+                                        <p>书籍电子版下载链接</p>
                                     </div>
                                     <div class="filter"></div>
                                 </div>
@@ -161,7 +166,7 @@
 
                                     </p>
 
-                                    <p class="card-text">重温我们的青春、梦想和回忆！</p>
+                                    <p class="card-text">重温我们的青春，梦想，还有回忆！</p>
 
                                 </div>
                             </div>
@@ -207,7 +212,7 @@
 
                                         <li class="list-inline-item">
                                             <a class="social-icon text-xs-center" target="_blank"
-                                                href="https://github.com/yvonshong">
+                                                href="https://github.com/yvonshong/911">
                                                 <i class="fab fa-github"></i>
                                             </a>
                                         </li>
@@ -341,53 +346,6 @@
 
         window.onload = mrc1;
     </script>
-
-    <script>
-        var imgUrl = "https://www.yvonshong.com/911/images/team-08.jpg";
-        var lineLink = "https://www.yvonshong.com/911/";
-        var descContent = "九世呓语 - 我们把往事的记忆幻化成光影纸质想使之永垂不朽"; //分享给好友的时候显示标题和描述，分享到朋友圈只显示标题
-        var shareTitle = "九世呓语";
-        var appid = "";
-        var share = {
-            shareFriend: function () {
-                WeixinJSBridge.invoke("sendAppMessage", {
-                    "appid": appid,
-                    "img_url": imgUrl,
-                    "img_width": "400",
-                    "img_height": "300",
-                    "link": lineLink,
-                    "desc": descContent,
-                    "title": shareTitle
-                }, function (res) {
-                    //_report("send_msg", res.err_msg);
-                })
-            },
-            //分享到朋友圈
-            shareTimeline: function () {
-                WeixinJSBridge.invoke("shareTimeline", {//
-                    "img_url": imgUrl,
-                    "img_width": "200",
-                    "img_height": "200",
-                    "link": lineLink,
-                    "desc": descContent,
-                    "title": shareTitle
-                }, function (res) {
-                    //_report("timeline", res.err_msg);
-                });
-            }
-        }
-        document.addEventListener("WeixinJSBridgeReady", function onBridgeReady() {//
-            //发送给好友
-            WeixinJSBridge.on("menu:share:appmessage", function (argv) {
-                share.shareFriend();
-            });
-            //分享到朋友圈
-            WeixinJSBridge.on("menu:share:timeline", function (argv) {
-                share.shareTimeline();
-            });
-        }, false);
-    </script>
-
 
     <script type="text/javascript">
         const card = document.querySelectorAll('.newcard');
