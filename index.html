@@ -263,11 +263,14 @@
     <script type="text/javascript">
 
 
+        url_list = ["https://i.imgloc.com/2023/06/07/VlYBqq.jpeg","https://i.imgloc.com/2023/06/07/VlYpdb.jpeg","https://i.imgloc.com/2023/06/07/VlYg2z.jpeg","https://i.imgloc.com/2023/06/07/VlYxEw.jpeg","https://i.imgloc.com/2023/06/07/VlY7Pa.jpeg","https://i.imgloc.com/2023/06/07/VlYeWx.jpeg","https://i.imgloc.com/2023/06/07/VlYzpk.jpeg","https://i.imgloc.com/2023/06/07/VlY6vL.jpeg","https://i.imgloc.com/2023/06/07/VlYG4p.jpeg","https://i.imgloc.com/2023/06/07/VlYdNU.jpeg","https://i.imgloc.com/2023/06/07/VlYhdv.jpeg","https://i.imgloc.com/2023/06/07/VlY5u3.jpeg","https://i.imgloc.com/2023/06/07/VlYoHy.jpeg","https://i.imgloc.com/2023/06/07/VlYsE5.jpeg","https://i.imgloc.com/2023/06/07/VlYvT8.jpeg","https://i.imgloc.com/2023/06/07/VlYJkZ.jpeg","https://i.imgloc.com/2023/06/07/VlYKpF.jpeg","https://i.imgloc.com/2023/06/07/VlYL9H.jpeg"]
+
+
         $(".card").css('background', function () {
             if ($(this).data("image-src")) {
                 var randomBgIndex = Math.floor(Math.random() * 19);
-                console.log('images/' + randomBgIndex + '.jpg')
-                var bg = ('url(images/' + randomBgIndex + '.jpg) no-repeat center center');
+                console.log(url_list[randomBgIndex])
+                var bg = ('url('+url_list[randomBgIndex]+') no-repeat center center');
                 return bg;
             }
 
