@@ -94,7 +94,7 @@
                     <div class="image-flip">
                         <div class="flip-postfix">
                             <div class="front-A h-100">
-                                <div class="uniquecard1 profile-card-6 bor-no lazy-bg" data-bg-src="https://cdn.jsdelivr.net/gh/yvonshong/911@master/images/1.jpg">
+                                <div class="uniquecard1 profile-card-6 bor-no lazy-bg" data-bg-src="https://cdn.jsdelivr.net/gh/yvonshong/911@master/images/-2.jpg">
 
                                     <div class="text-content">
                                         <h3> Three years </h3>
@@ -124,11 +124,11 @@
                     <div class="image-flip">
                         <div class="flip-postfix">
                             <div class="front-A h-100">
-                                <div class="uniquecard2 profile-card-6 bor-no lazy-bg" data-bg-src="https://cdn.jsdelivr.net/gh/yvonshong/911@master/images/2.jpg">
+                                <div class="uniquecard2 profile-card-6 bor-no lazy-bg" data-bg-src="https://cdn.jsdelivr.net/gh/yvonshong/911@master/images/-3.jpg">
 
                                     <div class="text-content">
                                         <h3> 毕业去向 </h3>
-                                        <p> 2013-2017-2020-2022 统计</p>
+                                        <p> 2013-2017-2020-2022-2025 统计</p>
                                     </div>
                                     <div class="filter"></div>
                                 </div>
@@ -139,8 +139,8 @@
                                     <!-- <p>2022 年统计结果</p> -->
                                     <p class="card-text">
                                         <a class="social-icon text-xs-center" target="_blank"
-                                            href="https://kp6d5cxbsq.feishu.cn/sheets/shtcnxb4imVMwaIDxTupOC19Did">
-                                            2013-2017-2020-2022 持续统计
+                                            href="https://kp6d5cxbsq.feishu.cn/wiki/Rz7Hw2wJtiX4fUkEAtWcSyUjnSg?from=from_copylink">
+                                            2013-2017-2020-2022-2025 持续统计
                                         </a>
                                         ，详情可联系 Yvon 获得</p>
 
@@ -154,7 +154,7 @@
                     <div class="image-flip">
                         <div class="flip-postfix">
                             <div class="front-A h-100">
-                                <div class="uniquecard3 profile-card-6 bor-no lazy-bg" data-bg-src="https://cdn.jsdelivr.net/gh/yvonshong/911@master/images/0.jpg">
+                                <div class="uniquecard3 profile-card-6 bor-no lazy-bg" data-bg-src="https://cdn.jsdelivr.net/gh/yvonshong/911@master/images/-1.jpg">
                                     <div class="text-content">
                                         <h3> 《九世呓语》 </h3>
                                         <p>书籍电子版下载/在线阅读链接</p>
@@ -315,10 +315,17 @@
             // Card flip logic
             const newCards = document.querySelectorAll('.newcard');
             newCards.forEach(card => {
-                const front = card.querySelector('.front-A');
-                front.addEventListener('click', () => {
+                const frontFace = card.querySelector('.front-A');
+                const backFace = card.querySelector('.newcard-img-overlay');
+
+                frontFace.addEventListener('click', () => {
                     const talkId = card.querySelector('.card-text').id;
                     fetchRandomTalk(talkId);
+                    card.classList.toggle("active");
+                });
+
+                // Add click event to the back face to flip it back
+                backFace.addEventListener('click', () => {
                     card.classList.toggle("active");
                 });
             });
