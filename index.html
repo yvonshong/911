@@ -19,13 +19,21 @@
     <!-- Fontawesome CSS -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css">
     <!-- Fonts and icons -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700&display=swap" rel="stylesheet">
+    <!-- Preload critical images -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/gh/yvonshong/911@master/images/1.jpg" as="image">
+    <link rel="preload" href="https://cdn.jsdelivr.net/gh/yvonshong/911@master/images/2.jpg" as="image">
+    <link rel="preload" href="https://cdn.jsdelivr.net/gh/yvonshong/911@master/images/3.jpg" as="image">
     <!-- Reset CSS -->
     <link rel="stylesheet" href="css/reset.css">
     <!-- Style CSS -->
     <link rel="stylesheet" href="css/style.css">
     <!-- Responsive  CSS -->
     <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        /* Ensure newlines in card text are rendered correctly */
+        .card-text { white-space: pre-line; }
+    </style>
 </head>
 
 <body>
@@ -47,9 +55,9 @@
 
                 <div class="newcard col-lg-6 col-md-6 col-sm-6 col-12" data-clickable="true">
                     <div class="newcard-inner">
-                        <div class="front-A h-100" onclick="mrc1()">
-                            <div class="card profile-card-5 bor-no" data-image-src="images/5.jpg">
-
+                        <div class="front-A h-100">
+                            <div class="card profile-card-5 bor-no lazy-bg"
+                                data-bg-src="random">
                                 <div class="text-content">
                                 </div>
                                 <div class="filter"></div>
@@ -66,9 +74,9 @@
 
                 <div class="newcard col-lg-6 col-md-6 col-sm-6 col-12" data-clickable="true">
                     <div class="newcard-inner">
-                        <div class="front-A h-100" onclick="mrc2()">
-                            <div class="card profile-card-5 bor-no" data-image-src="images/5.jpg">
-
+                        <div class="front-A h-100">
+                            <div class="card profile-card-5 bor-no lazy-bg"
+                                data-bg-src="random">
                                 <div class="text-content">
                                 </div>
                                 <div class="filter"></div>
@@ -83,10 +91,10 @@
                 </div>
 
                 <div class="col-lg-3 col-md-3 col-sm-3 col-12">
-                    <div class="image-flip" onclick="this.classList.toggle('hover');">
+                    <div class="image-flip">
                         <div class="flip-postfix">
                             <div class="front-A h-100">
-                                <div class="uniquecard1 profile-card-6 bor-no" data-image-src="images/1.jpg">
+                                <div class="uniquecard1 profile-card-6 bor-no lazy-bg" data-bg-src="https://cdn.jsdelivr.net/gh/yvonshong/911@master/images/1.jpg">
 
                                     <div class="text-content">
                                         <h3> Three years </h3>
@@ -113,10 +121,10 @@
                 </div>
 
                 <div class="col-lg-3 col-md-3 col-sm-3 col-12">
-                    <div class="image-flip" onclick="this.classList.toggle('hover');">
+                    <div class="image-flip">
                         <div class="flip-postfix">
                             <div class="front-A h-100">
-                                <div class="uniquecard2 profile-card-6 bor-no" data-image-src="images/2.jpg">
+                                <div class="uniquecard2 profile-card-6 bor-no lazy-bg" data-bg-src="https://cdn.jsdelivr.net/gh/yvonshong/911@master/images/2.jpg">
 
                                     <div class="text-content">
                                         <h3> 毕业去向 </h3>
@@ -143,10 +151,10 @@
                 </div>
 
                 <div class="col-lg-3 col-md-3 col-sm-3 col-12">
-                    <div class="image-flip" onclick="this.classList.toggle('hover');">
+                    <div class="image-flip">
                         <div class="flip-postfix">
                             <div class="front-A h-100">
-                                <div class="uniquecard3 profile-card-6 bor-no" data-image-src="images/3.jpg">
+                                <div class="uniquecard3 profile-card-6 bor-no lazy-bg" data-bg-src="https://cdn.jsdelivr.net/gh/yvonshong/911@master/images/0.jpg">
                                     <div class="text-content">
                                         <h3> 《九世呓语》 </h3>
                                         <p>书籍电子版下载/在线阅读链接</p>
@@ -182,10 +190,10 @@
                 </div>
 
                 <div class="col-lg-3 col-md-3 col-sm-3 col-12">
-                    <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                    <div class="image-flip">
                         <div class="flip-postfix">
                             <div class="front-A h-100">
-                                <div class="uniquecard4 profile-card-6 bor-no" data-image-src="images/3.jpg">
+                                <div class="uniquecard4 profile-card-6 bor-no lazy-bg" data-bg-src="https://i.loli.net/2020/10/28/HAbatdcnuM37PKf.png">
 
                                     <div class="text-content">
                                         <h3>Yvon Shong</h3>
@@ -254,119 +262,89 @@
     <!-- jquery latest version -->
     <script src="js/jquery.min.js"></script>
     <!-- popper.min.js -->
-    <script src="js/popper.min.js"></script>
+    <!-- <script src="js/popper.min.js"></script> -->
     <!-- bootstrap js -->
     <!-- <script src="js/bootstrap.min.js"></script> -->
     <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/js/bootstrap.min.js"></script>
 
 
     <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function () {
+            const talk_num = 671;
+            const url_list = Array.from({length: 19}, (_, i) => `https://cdn.jsdelivr.net/gh/yvonshong/911@master/images/${i}.jpg`);
+            // The line above is a shorthand for creating the array:
+            // ["https://.../0.jpg", "https://.../1.jpg", ..., "https://.../18.jpg"]
 
 
-        url_list = ["https://i.imgloc.com/2023/06/07/VlYBqq.jpeg","https://i.imgloc.com/2023/06/07/VlYpdb.jpeg","https://i.imgloc.com/2023/06/07/VlYg2z.jpeg","https://i.imgloc.com/2023/06/07/VlYxEw.jpeg","https://i.imgloc.com/2023/06/07/VlY7Pa.jpeg","https://i.imgloc.com/2023/06/07/VlYeWx.jpeg","https://i.imgloc.com/2023/06/07/VlYzpk.jpeg","https://i.imgloc.com/2023/06/07/VlY6vL.jpeg","https://i.imgloc.com/2023/06/07/VlYG4p.jpeg","https://i.imgloc.com/2023/06/07/VlYdNU.jpeg","https://i.imgloc.com/2023/06/07/VlYhdv.jpeg","https://i.imgloc.com/2023/06/07/VlY5u3.jpeg","https://i.imgloc.com/2023/06/07/VlYoHy.jpeg","https://i.imgloc.com/2023/06/07/VlYsE5.jpeg","https://i.imgloc.com/2023/06/07/VlYvT8.jpeg","https://i.imgloc.com/2023/06/07/VlYJkZ.jpeg","https://i.imgloc.com/2023/06/07/VlYKpF.jpeg","https://i.imgloc.com/2023/06/07/VlYL9H.jpeg"]
+            // Lazy load background images
+            const lazyBackgrounds = [].slice.call(document.querySelectorAll(".lazy-bg"));
 
+            if ("IntersectionObserver" in window) {
+                let lazyBackgroundObserver = new IntersectionObserver(function (entries, observer) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            let lazyBackground = entry.target;
+                            let bg_src = lazyBackground.dataset.bgSrc;
+                            if (bg_src === 'random') {
+                                const randomBgIndex = Math.floor(Math.random() * url_list.length);
+                                bg_src = url_list[randomBgIndex];
+                            }
+                            lazyBackground.style.backgroundImage = 'url(' + bg_src + ')';
+                            lazyBackground.style.backgroundSize = 'cover';
+                            lazyBackgroundObserver.unobserve(lazyBackground);
+                        }
+                    });
+                });
 
-        $(".card").css('background', function () {
-            if ($(this).data("image-src")) {
-                var randomBgIndex = Math.floor(Math.random() * 19);
-                console.log(url_list[randomBgIndex])
-                var bg = ('url('+url_list[randomBgIndex]+') no-repeat center center');
-                return bg;
+                lazyBackgrounds.forEach(function (lazyBackground) {
+                    lazyBackgroundObserver.observe(lazyBackground);
+                });
+            } else {
+                // Fallback for browsers without IntersectionObserver
+                lazyBackgrounds.forEach(function (lazyBackground) {
+                    let bg_src = lazyBackground.dataset.bgSrc;
+                    if (bg_src === 'random') {
+                        const randomBgIndex = Math.floor(Math.random() * url_list.length);
+                        bg_src = url_list[randomBgIndex];
+                    }
+                    lazyBackground.style.backgroundImage = 'url(' + bg_src + ')';
+                    lazyBackground.style.backgroundSize = 'cover';
+                });
             }
 
-
-        });
-
-
-
-
-        $(".uniquecard1").css('background', function () {
-
-            if ($(this).data("image-src")) {
-                var bg = ('url(https://i.328888.xyz/2023/05/17/VVyKeC.png) no-repeat center center');
-
-                return bg;
-            }
-        });
-        $(".uniquecard2").css('background', function () {
-
-            if ($(this).data("image-src")) {
-
-                var bg = ('url(https://i.328888.xyz/2023/05/17/VV4FbN.jpeg) no-repeat center center');
-                return bg;
-            }
-        });
-        $(".uniquecard3").css('background', function () {
-
-            if ($(this).data("image-src")) {
-                var bg = ('url(https://i.328888.xyz/2023/05/17/VVyLTP.jpeg) no-repeat center center');
-
-                return bg;
-            }
-        });
-
-        $(".uniquecard4").css('background', function () {
-
-            if ($(this).data("image-src")) {
-
-                var bg = ('url(https://i.loli.net/2020/10/28/HAbatdcnuM37PKf.png) no-repeat center center');
-                return bg;
-            }
-        });
-
-    </script>
-
-
-
-
-    <script language="javascript">
-        var talk_num = 671;
-
-
-        talk1_id = Math.floor(Math.random() * talk_num);
-        console.log("==========================")
-        console.log(`https://www.yvonshong.com/911/${talk1_id}.json`)
-
-
-        function mrc1() {
-            // $.get(`https://www.yvonshong.com/911/${talk1_id}.json`).done(function (data) {
-            $.get(`data/${talk1_id}.json`).done(function (data) {
-                var talk_list = data.data
-                var text1 = document.getElementById("talk1");
-                text1.innerHTML = talk_list[0].replace("\n", "<br/>");;
-                talk1_id = Math.floor(Math.random() * talk_num + 1);
-
+            // Card flip logic
+            const newCards = document.querySelectorAll('.newcard');
+            newCards.forEach(card => {
+                const front = card.querySelector('.front-A');
+                front.addEventListener('click', () => {
+                    const talkId = card.querySelector('.card-text').id;
+                    fetchRandomTalk(talkId);
+                    card.classList.toggle("active");
+                });
             });
 
-        }
-
-        talk2_id = Math.floor(Math.random() * talk_num);
-
-        function mrc2() {
-            // $.get(`https://www.yvonshong.com/911/${talk2_id}.json`).done(function (data) {
-            $.get(`data/${talk2_id}.json`).done(function (data) {
-                var talk_list = data.data
-                var text2 = document.getElementById("talk2");
-                text2.innerHTML = talk_list[0].replace("\n", "<br/>");;
-                talk2_id = Math.floor(Math.random() * talk_num);
-
+            const imageFlips = document.querySelectorAll('.image-flip');
+            imageFlips.forEach(flip => {
+                flip.addEventListener('click', () => flip.classList.toggle('hover'));
             });
 
-        }
+            // Fetch initial talk
+            fetchRandomTalk('talk1');
 
-        window.onload = mrc1;
+            function fetchRandomTalk(elementId) {
+                const talk_id = Math.floor(Math.random() * talk_num);
+                $.get(`data/${talk_id}.json`).done(function (data) {
+                    const talk_list = data.data;
+                    const textElement = document.getElementById(elementId);
+                    if (textElement && talk_list.length > 0) {
+                        textElement.innerText = talk_list[0];
+                    }
+                }).fail(function() {
+                    console.error(`Failed to load talk for ${elementId}`);
+                });
+            }
+        });
     </script>
-
-    <script type="text/javascript">
-        const card = document.querySelectorAll('.newcard');
-
-        for (let i = 0; i < card.length; i++) {
-            card[i].addEventListener("click", function () {
-                card[i].classList.toggle("active");
-            });
-        }
-    </script>
-
 
 </body>
 
