@@ -1,0 +1,168 @@
+/* Modern Dark Theme & Glassmorphism */
+:root {
+    --bg-color: #0f0f1f;
+    --text-color: #e0e0e0;
+    --accent-color: #00f2ff;
+    --accent-secondary: #ff0055;
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --card-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    overflow-x: hidden;
+    transition: background-color 0.3s ease;
+}
+
+/* Background Animation Canvas */
+#bg-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0, 242, 255, 0.5);
+}
+
+.title-wb {
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    text-align: center;
+    background: linear-gradient(90deg, var(--accent-color), #fff, var(--accent-secondary));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% auto;
+    animation: shine 5s linear infinite;
+}
+
+@keyframes shine {
+    to {
+        background-position: 200% center;
+    }
+}
+
+/* Glassmorphism Cards */
+.card,
+.newcard-inner,
+.uniquecard1,
+.uniquecard2,
+.uniquecard3,
+.uniquecard4 {
+    background: var(--glass-bg) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border) !important;
+    box-shadow: var(--card-shadow);
+    border-radius: 15px !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover,
+.newcard-inner:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px 0 rgba(0, 242, 255, 0.2);
+    border-color: var(--accent-color) !important;
+}
+
+/* Text Content in Cards */
+.text-content h3 {
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+.text-content p {
+    color: #ccc;
+}
+
+/* Links */
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: var(--accent-secondary);
+    text-shadow: 0 0 8px var(--accent-secondary);
+}
+
+/* Social Icons */
+.social-icon i {
+    font-size: 1.5rem;
+    margin: 0 10px;
+    color: #fff;
+    transition: transform 0.2s, color 0.2s;
+}
+
+.social-icon:hover i {
+    transform: scale(1.2);
+    color: var(--accent-color);
+}
+
+/* Flip Card Fixes for 3D effect */
+.image-flip:hover .flip-postfix {
+    transform: rotateY(180deg);
+}
+
+.flip-postfix {
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.front-A,
+.back-b {
+    backface-visibility: hidden;
+}
+
+.back-b {
+    transform: rotateY(180deg);
+    background: var(--glass-bg);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .title-wb {
+        font-size: 2rem;
+    }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--glass-border);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-color);
+}
