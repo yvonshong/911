@@ -10,30 +10,32 @@
     <meta name="description" content="我们把往事的记忆幻化成光影纸质想使之永垂不朽">
 
     <link rel="shortcut icon" href="images/favicon.ico">
-    
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/css/bootstrap.min.css">
-    
+
     <!-- Fontawesome CSS -->
     <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    
+
     <!-- Google Fonts for premium typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
 
     <!-- Preload critical images using China-accelerated proxy -->
-    <link rel="preload" href="https://jsd.onmicrosoft.cn/gh/yvonshong/911@master/images/1.jpg" as="image">
-    <link rel="preload" href="https://jsd.onmicrosoft.cn/gh/yvonshong/911@master/images/2.jpg" as="image">
-    <link rel="preload" href="https://jsd.onmicrosoft.cn/gh/yvonshong/911@master/images/4.jpg" as="image">
-    
+    <link rel="preload" href="https://pic.shong.win/911/1.jpg" as="image">
+    <link rel="preload" href="https://pic.shong.win/911/2.jpg" as="image">
+    <link rel="preload" href="https://pic.shong.win/911/4.jpg" as="image">
+
     <!-- Reset CSS -->
     <link rel="stylesheet" href="css/reset.css">
     <!-- Style CSS -->
     <link rel="stylesheet" href="css/style.css">
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="css/responsive.css">
-    
+
     <style>
         /* Ensure newlines in card text are rendered correctly */
         .card-text {
@@ -110,7 +112,7 @@
                         <div class="flip-postfix">
                             <div class="front-A h-100">
                                 <div class="uniquecard1 profile-card-6 bor-no lazy-bg"
-                                    data-bg-src="https://jsd.onmicrosoft.cn/gh/yvonshong/911@master/images/-2.jpg">
+                                    data-bg-src="https://pic.shong.win/911/-2.jpg">
                                     <div class="text-content">
                                         <h3>Three Years</h3>
                                         <p>Rich Huang</p>
@@ -140,7 +142,7 @@
                         <div class="flip-postfix">
                             <div class="front-A h-100">
                                 <div class="uniquecard2 profile-card-6 bor-no lazy-bg"
-                                    data-bg-src="https://jsd.onmicrosoft.cn/gh/yvonshong/911@master/images/-3.jpg">
+                                    data-bg-src="https://pic.shong.win/911/-3.jpg">
                                     <div class="text-content">
                                         <h3>毕业去向</h3>
                                         <p>持续统计 (2013-2025)</p>
@@ -170,7 +172,7 @@
                         <div class="flip-postfix">
                             <div class="front-A h-100">
                                 <div class="uniquecard3 profile-card-6 bor-no lazy-bg"
-                                    data-bg-src="https://jsd.onmicrosoft.cn/gh/yvonshong/911@master/images/-1.jpg">
+                                    data-bg-src="https://pic.shong.win/911/-1.jpg">
                                     <div class="text-content">
                                         <h3>《九世呓语》</h3>
                                         <p>电子版及在线阅读</p>
@@ -187,8 +189,7 @@
                                             href="https://www.yvonshong.com/911/pdf/%E4%B9%9D%E4%B8%96%E5%91%93%E8%AF%AD.pdf">
                                             <i class="fas fa-download"></i> PDF 电子版下载
                                         </a>
-                                        <a class="btn-action btn-read" target="_blank"
-                                            href="book/index.html">
+                                        <a class="btn-action btn-read" target="_blank" href="book/index.html">
                                             <i class="fas fa-book-open"></i> 在线阅读网页
                                         </a>
                                     </div>
@@ -217,7 +218,7 @@
                                     <h4 class="card-title">Yvon Shong</h4>
                                     <p class="card-desc">Hesai Tech</p>
                                     <p class="card-text">自动驾驶从业者，算法工程师。</p>
-                                    
+
                                     <ul class="list-inline social-links">
                                         <li class="list-inline-item">
                                             <a class="social-icon" target="_blank" title="知乎"
@@ -262,17 +263,17 @@
 
     <!-- jQuery -->
     <script src="js/jquery.min.js"></script>
-    
+
     <!-- Bootstrap JS Bundle (includes Popper) -->
     <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/js/bootstrap.min.js"></script>
 
     <script type="text/javascript">
         document.addEventListener("DOMContentLoaded", function () {
             const talk_num = 671;
-            
+
             // Available images in the images folder (excluding 3.jpg which doesn't exist)
             const available_indices = [0, 1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18];
-            const url_list = available_indices.map(i => `https://jsd.onmicrosoft.cn/gh/yvonshong/911@master/images/${i}.jpg`);
+            const url_list = available_indices.map(i => `https://pic.shong.win/911/${i}.jpg`);
 
             // Initialize cards using robust array selection
             const newCards = document.querySelectorAll('.newcard');
@@ -331,7 +332,7 @@
                                 return;
                             }
                             card.classList.remove("active");
-                            
+
                             // Change image after the flip transition finishes (300ms)
                             setTimeout(() => {
                                 changeCardImage(card);
