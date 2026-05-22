@@ -1,118 +1,126 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
     <title>九世呓语 | 我们把往事的记忆幻化成光影纸质想使之永垂不朽</title>
-    <!-- <script src="http://static.runoob.com/assets/vue/1.0.11/vue.min.js"></script> -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="html.design">
-    <!-- description -->
     <meta name="description" content="我们把往事的记忆幻化成光影纸质想使之永垂不朽">
 
-    <!DOCTYPE html>
-    <html lang="en">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/css/bootstrap.min.css">
+    
+    <!-- Fontawesome CSS -->
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts for premium typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
 
-    <head>
-        <title>九世呓语 | 我们把往事的记忆幻化成光影纸质想使之永垂不朽</title>
-        <!-- <script src="http://static.runoob.com/assets/vue/1.0.11/vue.min.js"></script> -->
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="html.design">
-        <!-- description -->
-        <meta name="description" content="我们把往事的记忆幻化成光影纸质想使之永垂不朽">
-
-        <!-- <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css"> -->
-
-        <link rel="shortcut icon" href="images/favicon.ico">
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/css/bootstrap.min.css">
-        <!-- Fontawesome CSS -->
-        <!-- Fontawesome CSS -->
-        <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-        <!-- Fonts and icons -->
-        <!-- Removed Google Fonts for China speed optimization -->
-        <!-- Preload critical images -->
-        <link rel="preload" href="https://cdn.jsdelivr.net/gh/yvonshong/911@master/images/1.jpg" as="image">
-        <link rel="preload" href="https://cdn.jsdelivr.net/gh/yvonshong/911@master/images/2.jpg" as="image">
-        <link rel="preload" href="https://cdn.jsdelivr.net/gh/yvonshong/911@master/images/3.jpg" as="image">
-        <!-- Reset CSS -->
-        <link rel="stylesheet" href="css/reset.css">
-        <!-- Style CSS -->
-        <link rel="stylesheet" href="css/style.css">
-        <!-- Responsive  CSS -->
-        <link rel="stylesheet" href="css/responsive.css">
-        <style>
-            /* Ensure newlines in card text are rendered correctly */
-            .card-text {
-                white-space: pre-line;
-            }
-        </style>
-    </head>
+    <!-- Preload critical images using China-accelerated proxy -->
+    <link rel="preload" href="https://jsd.onmicrosoft.cn/gh/yvonshong/911@master/images/1.jpg" as="image">
+    <link rel="preload" href="https://jsd.onmicrosoft.cn/gh/yvonshong/911@master/images/2.jpg" as="image">
+    <link rel="preload" href="https://jsd.onmicrosoft.cn/gh/yvonshong/911@master/images/4.jpg" as="image">
+    
+    <!-- Reset CSS -->
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <style>
+        /* Ensure newlines in card text are rendered correctly */
+        .card-text {
+            white-space: pre-line;
+        }
+    </style>
+</head>
 
 <body>
 
+    <!-- Ambient glowing backgrounds for modern premium look -->
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+
     <div class="team-main">
         <div class="container">
-            <div class="row">
+            <div class="row header-section">
                 <div class="col-lg-12">
                     <h1 class="title-wb">九世呓语</h1>
+                    <p class="subtitle-wb">我们把往事的记忆幻化成光影纸质想使之永垂不朽</p>
                 </div>
             </div>
 
-
-
-
-            <div class="row">
-
-
-
-                <div class="newcard col-lg-6 col-md-6 col-sm-6 col-12" data-clickable="true">
+            <!-- Dynamic Interactive Cards Row -->
+            <div class="row g-4 cards-container">
+                <div class="newcard col-lg-6 col-md-6 col-sm-12 col-12" data-clickable="true">
                     <div class="newcard-inner">
                         <div class="front-A h-100">
                             <div class="card profile-card-5 bor-no lazy-bg" data-bg-src="random">
+                                <div class="card-hint">
+                                    <i class="fas fa-book-open"></i>
+                                    <span>点击翻阅回忆</span>
+                                </div>
                                 <div class="text-content">
+                                    <h3>日记呓语</h3>
+                                    <p>点击随机唤醒一段往事</p>
                                 </div>
                                 <div class="filter"></div>
                             </div>
                         </div>
                         <div class="newcard-img-overlay">
-                            <p class="card-text" id="talk1">
-                            </p>
-
+                            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                            <p class="card-text" id="talk1">加载中...</p>
+                            <div class="flip-back-hint">
+                                <i class="fas fa-redo"></i> 点击收起
+                            </div>
                         </div>
                     </div>
                 </div>
 
-
-                <div class="newcard col-lg-6 col-md-6 col-sm-6 col-12" data-clickable="true">
+                <div class="newcard col-lg-6 col-md-6 col-sm-12 col-12" data-clickable="true">
                     <div class="newcard-inner">
                         <div class="front-A h-100">
                             <div class="card profile-card-5 bor-no lazy-bg" data-bg-src="random">
+                                <div class="card-hint">
+                                    <i class="fas fa-book-open"></i>
+                                    <span>点击翻阅回忆</span>
+                                </div>
                                 <div class="text-content">
+                                    <h3>青春呓语</h3>
+                                    <p>点击随机唤醒一段往事</p>
                                 </div>
                                 <div class="filter"></div>
                             </div>
                         </div>
                         <div class="newcard-img-overlay">
-
-                            <p class="card-text" id="talk2">
-                            </p>
+                            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                            <p class="card-text" id="talk2">加载中...</p>
+                            <div class="flip-back-hint">
+                                <i class="fas fa-redo"></i> 点击收起
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="col-lg-3 col-md-3 col-sm-3 col-12">
+            <!-- Static Info Cards Row -->
+            <div class="row g-4 info-cards-container mt-2">
+                <!-- Card 1: Three Years Video -->
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                     <div class="image-flip">
                         <div class="flip-postfix">
                             <div class="front-A h-100">
                                 <div class="uniquecard1 profile-card-6 bor-no lazy-bg"
-                                    data-bg-src="https://cdn.jsdelivr.net/gh/yvonshong/911@master/images/-2.jpg">
-
+                                    data-bg-src="https://jsd.onmicrosoft.cn/gh/yvonshong/911@master/images/-2.jpg">
                                     <div class="text-content">
-                                        <h3> Three years </h3>
+                                        <h3>Three Years</h3>
                                         <p>Rich Huang</p>
                                     </div>
                                     <div class="filter"></div>
@@ -120,103 +128,94 @@
                             </div>
                             <div class="back-b h-100">
                                 <div class="card bor-no">
-                                    <h4 class="card-title"> Three years </h4>
-                                    <p>
-                                        <a class="social-icon text-xs-center" target="_blank"
-                                            href="https://www.bilibili.com/video/BV1xY411n7DH/">
-                                            可戳 Bilibili 观看此系列视频
-                                        </a>
-                                    </p>
+                                    <h4 class="card-title">Three Years</h4>
                                     <p class="card-text">十七八岁，雪白的衣领上系着我们鲜红的梦想。</p>
-
+                                    <div class="card-action">
+                                        <a class="btn-action btn-bilibili" target="_blank"
+                                            href="https://www.bilibili.com/video/BV1xY411n7DH/">
+                                            <i class="fab fa-bilibili"></i> Bilibili 视频系列
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-3 col-sm-3 col-12">
+                <!-- Card 2: Graduation Statistics -->
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                     <div class="image-flip">
                         <div class="flip-postfix">
                             <div class="front-A h-100">
                                 <div class="uniquecard2 profile-card-6 bor-no lazy-bg"
-                                    data-bg-src="https://cdn.jsdelivr.net/gh/yvonshong/911@master/images/-3.jpg">
-
+                                    data-bg-src="https://jsd.onmicrosoft.cn/gh/yvonshong/911@master/images/-3.jpg">
                                     <div class="text-content">
-                                        <h3> 毕业去向 </h3>
-                                        <p> 2013-2017-2020-2022-2025 统计</p>
+                                        <h3>毕业去向</h3>
+                                        <p>持续统计 (2013-2025)</p>
                                     </div>
                                     <div class="filter"></div>
                                 </div>
                             </div>
                             <div class="back-b h-100">
                                 <div class="card bor-no">
-                                    <h4 class="card-title"> 毕业去向 </h4>
-                                    <!-- <p>2022 年统计结果</p> -->
-                                    <p class="card-text">
-                                        <a class="social-icon text-xs-center" target="_blank"
+                                    <h4 class="card-title">毕业去向统计</h4>
+                                    <p class="card-text">历届同学毕业去向追踪，数据持续更新。详情可联系 Yvon 获得。</p>
+                                    <div class="card-action">
+                                        <a class="btn-action btn-feishu" target="_blank"
                                             href="https://kp6d5cxbsq.feishu.cn/wiki/Rz7Hw2wJtiX4fUkEAtWcSyUjnSg?from=from_copylink">
-                                            2013-2017-2020-2022-2025 持续统计
+                                            <i class="fas fa-file-alt"></i> 飞书文档在线查看
                                         </a>
-                                        ，详情可联系 Yvon 获得
-                                    </p>
-
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-3 col-sm-3 col-12">
+                <!-- Card 3: Download & Reading -->
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                     <div class="image-flip">
                         <div class="flip-postfix">
                             <div class="front-A h-100">
                                 <div class="uniquecard3 profile-card-6 bor-no lazy-bg"
-                                    data-bg-src="https://cdn.jsdelivr.net/gh/yvonshong/911@master/images/-1.jpg">
+                                    data-bg-src="https://jsd.onmicrosoft.cn/gh/yvonshong/911@master/images/-1.jpg">
                                     <div class="text-content">
-                                        <h3> 《九世呓语》 </h3>
-                                        <p>书籍电子版下载/在线阅读链接</p>
+                                        <h3>《九世呓语》</h3>
+                                        <p>电子版及在线阅读</p>
                                     </div>
                                     <div class="filter"></div>
                                 </div>
                             </div>
                             <div class="back-b h-100">
                                 <div class="card bor-no">
-                                    <h4 class="card-title"> 《九世呓语》 </h4>
-                                    <p>
-                                        <a class="social-icon text-xs-center" target="_blank"
+                                    <h4 class="card-title">《九世呓语》</h4>
+                                    <p class="card-text">重温我们的青春、梦想，还有回忆！包含完整版电子书与网页排版。</p>
+                                    <div class="card-actions-group">
+                                        <a class="btn-action btn-download" target="_blank"
                                             href="https://www.yvonshong.com/911/pdf/%E4%B9%9D%E4%B8%96%E5%91%93%E8%AF%AD.pdf">
-                                            2013.6 版 电子版下载链接
+                                            <i class="fas fa-download"></i> PDF 电子版下载
                                         </a>
-
-                                    </p>
-                                    <p>
-                                        <a class="social-icon text-xs-center" target="_blank"
-                                            href="https://www.yvonshong.com/911/README.html">
-                                            在线阅读网页
+                                        <a class="btn-action btn-read" target="_blank"
+                                            href="book/index.html">
+                                            <i class="fas fa-book-open"></i> 在线阅读网页
                                         </a>
-
-                                    </p>
-
-
-                                    <p class="card-text">重温我们的青春，梦想，还有回忆！</p>
-
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-3 col-sm-3 col-12">
+                <!-- Card 4: Yvon Shong Profile -->
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                     <div class="image-flip">
                         <div class="flip-postfix">
                             <div class="front-A h-100">
                                 <div class="uniquecard4 profile-card-6 bor-no lazy-bg"
                                     data-bg-src="https://i.loli.net/2020/10/28/HAbatdcnuM37PKf.png">
-
                                     <div class="text-content">
                                         <h3>Yvon Shong</h3>
-                                        <p>Engineer</p>
+                                        <p>Engineer / Creator</p>
                                     </div>
                                     <div class="filter"></div>
                                 </div>
@@ -224,145 +223,151 @@
                             <div class="back-b h-100">
                                 <div class="card bor-no">
                                     <h4 class="card-title">Yvon Shong</h4>
-                                    <p>Hesai Tech</p>
-                                    <p class="card-text">自动驾驶从业者，算法工程师</p>
-                                    <ul class="list-inline">
+                                    <p class="card-desc">Hesai Tech</p>
+                                    <p class="card-text">自动驾驶从业者，算法工程师。</p>
+                                    
+                                    <ul class="list-inline social-links">
                                         <li class="list-inline-item">
-                                            <a class="social-icon text-xs-center" target="_blank"
+                                            <a class="social-icon" target="_blank" title="知乎"
                                                 href="https://www.zhihu.com/people/yvonshong">
-                                                <!-- <i class="fab fa-weibo"></i> -->
-                                                <i class="fa fa-zhihu"></i>
+                                                <i class="fa-brands fa-zhihu"></i>
                                             </a>
                                         </li>
-
-
                                         <li class="list-inline-item">
-                                            <a class="social-icon text-xs-center" target="_blank"
+                                            <a class="social-icon" target="_blank" title="Bilibili"
                                                 href="https://space.bilibili.com/6083595">
-                                                <!-- <i class="fa-brands fa-bilibili"></i> -->
-                                                <i class="fa fa-bilibili"></i>
+                                                <i class="fa-brands fa-bilibili"></i>
                                             </a>
                                         </li>
-
                                         <li class="list-inline-item">
-                                            <a class="social-icon text-xs-center" target="_blank"
+                                            <a class="social-icon" target="_blank" title="GitHub"
                                                 href="https://github.com/yvonshong/911">
-                                                <i class="fab fa-github"></i>
+                                                <i class="fa-brands fa-github"></i>
                                             </a>
                                         </li>
-
-
                                         <li class="list-inline-item">
-                                            <a class="social-icon text-xs-center" target="_blank"
+                                            <a class="social-icon" target="_blank" title="个人博客"
                                                 href="https://www.yvonshong.com/">
-                                                <!-- <i class="fab fa-rss"></i> -->
-                                                <i class="fa fa-rss"></i>
+                                                <i class="fa-solid fa-rss"></i>
                                             </a>
                                         </li>
-
                                     </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>All Rights Reserved. &copy; 2023 @ Yvon Shong
-                    </p>
+
+            <!-- Footer Section -->
+            <div class="row footer-section mt-5">
+                <div class="col-lg-12 text-center">
+                    <p class="copyright">All Rights Reserved. &copy; 2023 - 2026 @ Yvon Shong</p>
                 </div>
             </div>
         </div>
     </div>
 
-
-    <!-- jquery latest version -->
+    <!-- jQuery -->
     <script src="js/jquery.min.js"></script>
-    <!-- popper.min.js -->
-    <!-- <script src="js/popper.min.js"></script> -->
-    <!-- bootstrap js -->
-    <!-- <script src="js/bootstrap.min.js"></script> -->
+    
+    <!-- Bootstrap JS Bundle (includes Popper) -->
     <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/js/bootstrap.min.js"></script>
-
 
     <script type="text/javascript">
         document.addEventListener("DOMContentLoaded", function () {
             const talk_num = 671;
-            const url_list = Array.from({ length: 19 }, (_, i) => `https://cdn.jsdelivr.net/gh/yvonshong/911@master/images/${i}.jpg`);
+            
+            // Available images in the images folder (excluding 3.jpg which doesn't exist)
+            const available_indices = [0, 1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18];
+            const url_list = available_indices.map(i => `https://jsd.onmicrosoft.cn/gh/yvonshong/911@master/images/${i}.jpg`);
 
-            // Initialize cards with unique random images
-            const card1 = document.querySelector('.newcard:nth-of-type(1)');
-            const card2 = document.querySelector('.newcard:nth-of-type(2)');
-
-            let imgIndex1 = Math.floor(Math.random() * url_list.length);
-            let imgIndex2 = Math.floor(Math.random() * url_list.length);
-
-            // Ensure they start different
-            while (imgIndex1 === imgIndex2) {
-                imgIndex2 = Math.floor(Math.random() * url_list.length);
-            }
-
-            setCardImage(card1, imgIndex1);
-            setCardImage(card2, imgIndex2);
-
-            function setCardImage(card, index) {
-                const bgDiv = card.querySelector('.lazy-bg');
-                bgDiv.style.backgroundImage = `url(${url_list[index]})`;
-                bgDiv.style.backgroundSize = 'cover';
-                card.dataset.imgIndex = index;
-            }
-
-            // Card flip logic
+            // Initialize cards using robust array selection
             const newCards = document.querySelectorAll('.newcard');
-            newCards.forEach(card => {
-                const frontFace = card.querySelector('.front-A');
-                const backFace = card.querySelector('.newcard-img-overlay');
+            if (newCards.length >= 2) {
+                const card1 = newCards[0];
+                const card2 = newCards[1];
 
-                frontFace.addEventListener('click', () => {
-                    const talkId = card.querySelector('.card-text').id;
-                    fetchRandomTalk(talkId);
-                    card.classList.add("active");
-                });
+                let imgIndex1 = Math.floor(Math.random() * url_list.length);
+                let imgIndex2 = Math.floor(Math.random() * url_list.length);
 
-                // Add click event to the back face to flip it back and change image
-                backFace.addEventListener('click', () => {
-                    card.classList.remove("active");
-
-                    // Change image after a short delay to match transition or immediately? 
-                    // Usually better to change it when it's flipped back or right after flip starts.
-                    // Let's change it immediately so next time it flips it's new.
-                    // Wait for transition to finish (0.6s) so user doesn't see it change while flipping?
-                    // Or change it *after* it flips back.
-
-                    setTimeout(() => {
-                        changeCardImage(card);
-                    }, 300); // Change halfway through flip or after
-                });
-            });
-
-            function changeCardImage(currentCard) {
-                const otherCard = currentCard === card1 ? card2 : card1;
-                const otherIndex = parseInt(otherCard.dataset.imgIndex);
-                const currentIndex = parseInt(currentCard.dataset.imgIndex);
-
-                let newIndex = Math.floor(Math.random() * url_list.length);
-
-                // Ensure new image is different from the other card AND different from current (optional but good)
-                while (newIndex === otherIndex || newIndex === currentIndex) {
-                    newIndex = Math.floor(Math.random() * url_list.length);
+                // Ensure unique starting images
+                while (imgIndex1 === imgIndex2) {
+                    imgIndex2 = Math.floor(Math.random() * url_list.length);
                 }
 
-                setCardImage(currentCard, newIndex);
+                setCardImage(card1, imgIndex1);
+                setCardImage(card2, imgIndex2);
+
+                function setCardImage(card, index) {
+                    const bgDiv = card.querySelector('.lazy-bg');
+                    if (bgDiv) {
+                        bgDiv.style.backgroundImage = `url(${url_list[index]})`;
+                        bgDiv.style.backgroundSize = 'cover';
+                        bgDiv.style.backgroundPosition = 'center';
+                    }
+                    card.dataset.imgIndex = index;
+                }
+
+                // Card flip logic
+                newCards.forEach(card => {
+                    const frontFace = card.querySelector('.front-A');
+                    const backFace = card.querySelector('.newcard-img-overlay');
+
+                    if (frontFace && backFace) {
+                        frontFace.addEventListener('click', () => {
+                            const cardText = card.querySelector('.card-text');
+                            if (cardText) {
+                                const talkId = cardText.id;
+                                fetchRandomTalk(talkId);
+                            }
+                            card.classList.add("active");
+                        });
+
+                        // Add click event to flip back
+                        backFace.addEventListener('click', (e) => {
+                            // Don't flip back if user is clicking a link inside the back face
+                            if (e.target.closest('a')) {
+                                return;
+                            }
+                            card.classList.remove("active");
+                            
+                            // Change image after the flip transition finishes (300ms)
+                            setTimeout(() => {
+                                changeCardImage(card);
+                            }, 300);
+                        });
+                    }
+                });
+
+                function changeCardImage(currentCard) {
+                    const otherCard = currentCard === card1 ? card2 : card1;
+                    const otherIndex = parseInt(otherCard.dataset.imgIndex) || 0;
+                    const currentIndex = parseInt(currentCard.dataset.imgIndex) || 0;
+
+                    let newIndex = Math.floor(Math.random() * url_list.length);
+
+                    // Ensure new image is different from the other card and different from current
+                    while (newIndex === otherIndex || newIndex === currentIndex) {
+                        newIndex = Math.floor(Math.random() * url_list.length);
+                    }
+
+                    setCardImage(currentCard, newIndex);
+                }
             }
 
+            // Info cards toggle on click for touch screens, with links exclusions
             const imageFlips = document.querySelectorAll('.image-flip');
             imageFlips.forEach(flip => {
-                flip.addEventListener('click', () => flip.classList.toggle('hover'));
+                flip.addEventListener('click', (e) => {
+                    if (e.target.closest('a') || e.target.closest('.btn-action')) {
+                        return; // Let the link operate normally without flipping
+                    }
+                    flip.classList.toggle('hover');
+                });
             });
 
-            // Lazy load other backgrounds (for static cards)
+            // Lazy load other backgrounds (for static cards) using fast CDN proxy
             const staticLazyBackgrounds = document.querySelectorAll(".image-flip .lazy-bg");
             if ("IntersectionObserver" in window) {
                 let lazyBackgroundObserver = new IntersectionObserver(function (entries, observer) {
@@ -372,6 +377,7 @@
                             let bg_src = lazyBackground.dataset.bgSrc;
                             lazyBackground.style.backgroundImage = 'url(' + bg_src + ')';
                             lazyBackground.style.backgroundSize = 'cover';
+                            lazyBackground.style.backgroundPosition = 'center';
                             lazyBackgroundObserver.unobserve(lazyBackground);
                         }
                     });
@@ -385,14 +391,9 @@
                     let bg_src = lazyBackground.dataset.bgSrc;
                     lazyBackground.style.backgroundImage = 'url(' + bg_src + ')';
                     lazyBackground.style.backgroundSize = 'cover';
+                    lazyBackground.style.backgroundPosition = 'center';
                 });
             }
-
-            // Fetch initial talk
-            // fetchRandomTalk('talk1'); // No need to pre-fetch if we fetch on click, but maybe good for first load? 
-            // Actually, let's not pre-fetch to ensure it's fresh on click, or pre-fetch one.
-            // The original code fetched talk1. Let's leave it or remove it. 
-            // If we fetch on click, we don't strictly need this.
 
             function fetchRandomTalk(elementId) {
                 const talk_id = Math.floor(Math.random() * talk_num);
@@ -410,3 +411,5 @@
     </script>
 
 </body>
+
+</html>

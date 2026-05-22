@@ -1,0 +1,13 @@
+# HonKit / GitBook build outputs
+book/
+md/book/
+
+# Node dependencies
+node_modules/
+package-lock.json
+.npm/
+
+# OS/IDE configs
+.DS_Store
+.vscode/
+.idea/
