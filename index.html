@@ -67,10 +67,6 @@
                                     <i class="fas fa-book-open"></i>
                                     <span>点击翻阅回忆</span>
                                 </div>
-                                <div class="text-content">
-                                    <h3>日记呓语</h3>
-                                    <p>点击随机唤醒一段往事</p>
-                                </div>
                                 <div class="filter"></div>
                             </div>
                         </div>
@@ -91,10 +87,6 @@
                                 <div class="card-hint">
                                     <i class="fas fa-book-open"></i>
                                     <span>点击翻阅回忆</span>
-                                </div>
-                                <div class="text-content">
-                                    <h3>青春呓语</h3>
-                                    <p>点击随机唤醒一段往事</p>
                                 </div>
                                 <div class="filter"></div>
                             </div>
@@ -316,12 +308,20 @@
 
                     if (frontFace && backFace) {
                         frontFace.addEventListener('click', () => {
+                            if (card.classList.contains('loading') || card.classList.contains('active')) {
+                                return;
+                            }
                             const cardText = card.querySelector('.card-text');
                             if (cardText) {
                                 const talkId = cardText.id;
-                                fetchRandomTalk(talkId);
+                                card.classList.add('loading');
+                                fetchRandomTalk(talkId, () => {
+                                    card.classList.remove('loading');
+                                    card.classList.add("active");
+                                });
+                            } else {
+                                card.classList.add("active");
                             }
-                            card.classList.add("active");
                         });
 
                         // Add click event to flip back
@@ -395,7 +395,7 @@
                 });
             }
 
-            function fetchRandomTalk(elementId) {
+            function fetchRandomTalk(elementId, callback) {
                 const talk_id = Math.floor(Math.random() * talk_num);
                 $.get(`data/${talk_id}.json`).done(function (data) {
                     const talk_list = data.data;
@@ -403,8 +403,14 @@
                     if (textElement && talk_list.length > 0) {
                         textElement.innerText = talk_list[0];
                     }
+                    if (typeof callback === 'function') {
+                        callback();
+                    }
                 }).fail(function () {
                     console.error(`Failed to load talk for ${elementId}`);
+                    if (typeof callback === 'function') {
+                        callback();
+                    }
                 });
             }
         });
